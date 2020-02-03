@@ -2,11 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sata-moto.github.io</id>
     <title>Sata_moto 的博客</title>
-    <updated>2020-02-03T23:46:16.200Z</updated>
+    <updated>2020-02-03T23:46:56.426Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sata-moto.github.io"/>
     <link rel="self" href="https://sata-moto.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>从远方而来...归往远方...
+</subtitle>
     <logo>https://sata-moto.github.io/images/avatar.png</logo>
     <icon>https://sata-moto.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Sata_moto 的博客</rights>
