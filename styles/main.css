@@ -1895,11 +1895,11 @@ body {
         margin: 0 auto;
       }
     @font-face {
-      font-family: 'fzqtjt.ttf';
-      src: url('/media/fonts/fzqtjt.ttf.ttf');
+      font-family: 'fzqtjt';
+      src: url('/media/fonts/fzqtjt.ttf');
     }
     * {
-        font-family: 'fzqtjt.ttf';
+        font-family: 'fzqtjt';
     }body {
       color: #343a40;
     }
