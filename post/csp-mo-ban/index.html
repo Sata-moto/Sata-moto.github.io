@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>CSP 模板 | Sata_星空&#39;s Blog</title>
+<meta name="keywords" content="Gridea静态个人博客">
+<meta name="description" content="从远方而来...归往远方...
+">
+<link rel="shortcut icon" href="https://sata-moto.github.io/favicon.ico?v=1580805116854">
+<link rel="stylesheet" href="https://sata-moto.github.io/styles/main.css">
+
+<link rel="stylesheet" href="/media/css/gemini.css">
+
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/androidstudio.css" rel="stylesheet">  
+<script src="/media/hljs/highlight.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    <meta name="description" content="CSP 模板" />
+    <meta name="keywords" content="模板" />
+  </head>
+  <body>
+    <div class="head-top-line"></div>
+    <div class="header-box">
+      
+<div class=" gemini">
+  <header class="header bg-color ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>Sata_星空&#39;s Blog</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">工于心，简于形</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            <li class="nav-item ">
+              
+                <a href="/">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            <li class="nav-item ">
+              
+                <a href="/archives">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            <li class="nav-item ">
+              
+                <a href="/tags">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            <li class="nav-item ">
+              
+                <a href="/post/about">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          <li class="nav-item">
+            <a>
+              <i class="fa fa-search"></i> 搜索
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+    </div>
+    <div class="main-continer">
+      
+      <div class="section-layout gemini ">
+        <div class="section-layout-wrapper">
+          
+
+<div class="sidebar">
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          <div class="post-side-meta" id="post_side_meta">
+            
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="https://sata-moto.github.io/images/avatar.png"/>
+    <p class="site-author-name">Sata_星空&#39;s Blog</p>
+    <p class="site-description right-motion">从远方而来...归往远方...</p>
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">8</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">8</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">8</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://sata-moto.github.io/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  <div class="sidebar-item sidebar-item-social">
+    <div class="social-item">
+      
+        <a href="">
+          <i class="fa fa-qq"></i> 2984854964
+        </a>
+      
+        <a href="https://www.luogu.com.cn/blog/Sata-mato/">
+          <i class="fa fa-user-circle"></i> luogu博客
+        </a>
+      
+      
+    </div>
+  </div>
+
+
+</div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
+        
+      </div>
+    </div>
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+
+  if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+    let hasFix = false;
+    let scrollEl = document.querySelector('.main-continer');
+    let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+    window.addEventListener('scroll', function(e) {
+    if (document.scrollingElement.scrollTop >= limitTop) {
+      if (!hasFix) {
+        sidebar.classList.add('sidebar-fixed');
+        hasFix = true;
+      }
+    } else {
+      if (hasFix) {
+        sidebar.classList.remove('sidebar-fixed');
+        hasFix = false;
+      }
+    }
+  });
+  }
+  
+</script>
+          <div class="section-box box-shadow-wrapper">
+            <div class="section bg-color post post-page">
+              <div class="article-box">
+    <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://sata-moto.github.io/post/csp-mo-ban">
+      CSP 模板
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2020-02-04</span>
+    </span>
+    
+      <span class="meta-item">
+        <span class="post-meta-divider pc-show">|</span>
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
+        
+          
+            <a href="https://sata-moto.github.io/tag/c8lubDvLz">
+              <span>模板</span>
+            </a>
+          
+        
+      </span>
+      <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>31分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>5048<span class="pc-show">字数</span></span>
+    </span>
+  </div>
+</header>
+</div>
+              <div class="post-body next-md-body" id="post_body">
+                <h3 id="前言">前言：</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 本文若有错误请于下方评论区指出或私信笔者。</p>
+<pre><code class="language-cpp">//CSP 考前模板
+
+#include &lt;bits/stdc++.h&gt;
+#define int long long
+
+using namespace std;
+//------------------------------分割线------------------------------//
+
+//  通用  //
+
+//搜索（以八数码为例）
+namespace search
+{
+	string S, E = &quot;123804765&quot;;
+
+	int pla_0;
+	int py[4] = { -3, -1, 1, 3};
+
+	void init()
+	{
+		cin &gt;&gt; S;
+
+		for(int k = 0; k &lt; 9; k++)
+			if(S[k] == '0')
+				pla_0 = k;
+	}
+
+	namespace BFS
+	{
+		set &lt;string &gt; vis;
+		//bool vis[N];
+
+		struct node
+		{
+			string s;
+			int cnt, wz;
+
+			node (string a, int b, int c)
+			{
+				s = a, wz = b, cnt = c;
+			}
+			node() { }
+		};
+		queue &lt;node &gt; q;
+
+		void BFS()
+		{
+			if(S == E)
+			{
+				printf(&quot;0&quot;);
+
+				return ;
+			}
+
+			q.push(node(S, pla_0, 0)), vis.insert(S);
+
+			while(!q.empty())
+			{
+				string s = q.front().s;
+				int wz = q.front().wz, cnt = q.front().cnt;
+
+				q.pop();
+
+				for(int k = 0; k &lt; 4; k++)
+				{
+					string ss = s;
+					if((wz + 1) % 3 == 0 &amp;&amp; k == 2) continue;
+					if((wz + 1) % 3 == 1 &amp;&amp; k == 1) continue;
+					if(wz / 3 == 0 &amp;&amp; k == 0) continue;
+					if(wz / 3 == 2 &amp;&amp; k == 3) continue;
+
+					int to = wz + py[k];
+					swap(ss[wz], ss[to]);
+
+					if(vis.count(ss) == 0)
+					{
+						q.push(node(ss, to, cnt + 1));
+
+						if(ss == E)
+						{
+							printf(&quot;%lld\n&quot;, cnt + 1);
+
+							return ;
+						}
+
+						vis.insert(ss);
+					}
+				}
+			}
+		}
+	}
+
+	namespace DFS
+	{
+		int answ = 0x3f3f3f3f;
+
+		set &lt;string &gt; vis;
+
+		void DFS(string &amp; now, int wz, int cnt)
+		{
+			if(now == E)
+			{
+				answ = min(answ, cnt);
+
+				return ;
+			}
+
+			vis.insert(now);
+
+			for(int k = 0; k &lt; 4; k++)
+			{
+				string s = now;
+
+				if((wz + 1) % 3 == 0 &amp;&amp; k == 2) continue;
+				if((wz + 1) % 3 == 1 &amp;&amp; k == 1) continue;
+				if(wz / 3 == 0 &amp;&amp; k == 0) continue;
+				if(wz / 3 == 2 &amp;&amp; k == 3) continue;
+
+				int to = wz + py[k];
+				swap(s[wz], s[to]);
+
+				if(vis.count(s) == 0)
+					DFS(s, to, cnt + 1);
+			}
+
+			vis.erase(now);
+		}
+	}
+
+	namespace Astar
+	{
+		struct node
+		{
+			string s;
+			int cnt, wz, judge;
+
+			node (string a, int b, int c, int d)
+			{
+				s = a, wz = b, cnt = c, judge = d;
+			}
+			node() { }
+
+			bool operator &lt; (const node &amp; other) const
+			{
+				//这个估价是基于贪心思想实现的估价，并不能严格保证
+				return judge + cnt &gt; other.judge + other.cnt;
+			}
+		};
+		priority_queue &lt;node &gt; q;
+
+		set &lt;string &gt; vis;
+
+		int get_judge(string &amp; s)
+		{
+			int judge = 0;
+			for(int k = 0; k &lt; 9; k++)
+				if(s[k] != E[k])
+					judge++;
+
+			return judge;
+		}
+
+		void Astar()
+		{
+			if(S == E)
+			{
+				printf(&quot;0&quot;);
+
+				return ;
+			}
+
+			vis.insert(S);
+
+			q.push(node(S, pla_0, 0 , get_judge(S)));
+
+			while(!q.empty())
+			{
+				string s = q.top().s;
+				int wz = q.top().wz, cnt = q.top().cnt;
+
+				if(s == E)
+				{
+					printf(&quot;%lld\n&quot;, cnt);
+
+					return ;
+				}
+
+				q.pop();
+
+				for(int k = 0; k &lt; 4; k++)
+				{
+					string ss = s;
+					if((wz + 1) % 3 == 0 &amp;&amp; k == 2) continue;
+					if((wz + 1) % 3 == 1 &amp;&amp; k == 1) continue;
+					if(wz / 3 == 0 &amp;&amp; k == 0) continue;
+					if(wz / 3 == 2 &amp;&amp; k == 3) continue;
+
+					int to = wz + py[k];
+					swap(ss[wz], ss[to]);
+
+					if(vis.count(ss) == 0)
+					{
+						q.push(node(ss, to, cnt + 1 , get_judge(ss)));
+						vis.insert(ss);
+					}
+				}
+			}
+		}
+	}
+
+	namespace IDAstar
+	{
+		set &lt;string &gt; vis;
+
+		int get_judge(string &amp; s)
+		{
+			int judge = 0;
+			for(int k = 0; k &lt; 9; k++)
+				if(s[k] != E[k])
+					judge++;
+
+			return judge;
+		}
+
+		bool DFS(string &amp; now, int wz, int cnt , int judge, int limit)
+		{
+			if(now == E)
+				return true;
+
+			if(judge + cnt &gt; limit)
+				return false;
+
+			vis.insert(now);
+
+			for(int k = 0; k &lt; 4; k++)
+			{
+				string s = now;
+
+				if((wz + 1) % 3 == 0 &amp;&amp; k == 2) continue;
+				if((wz + 1) % 3 == 1 &amp;&amp; k == 1) continue;
+				if(wz / 3 == 0 &amp;&amp; k == 0) continue;
+				if(wz / 3 == 2 &amp;&amp; k == 3) continue;
+
+				int to = wz + py[k];
+				swap(s[wz], s[to]);
+
+				if(vis.count(s) == 0)
+					if(DFS(s, to, cnt + 1 , get_judge(s) - 1, limit))
+						return true;
+			}
+
+			vis.erase(now);
+
+			return false;
+		}
+
+		void IDAstar()
+		{
+			for(int k = 0;; k++)
+			{
+				if(DFS(S, pla_0, 0, get_judge(S) - 1, k))
+				{
+					printf(&quot;%lld&quot;, k);
+
+					return ;
+				}
+			}
+		}
+	}
+}
+
+//二分搜索
+namespace binary_search
+{
+#define check_the_ans rand()
+
+	//判定函数
+	bool check(int x)
+	{
+		return check_the_ans;
+	}
+
+	//STL中同名函数
+	int lower_bound(int l, int r, int x)
+	{
+		while(l &lt; r)
+		{
+			int mid = (l + r) &gt;&gt; 1;
+
+			if(check(mid))
+				r = mid;
+			else
+				l = mid + 1;
+		}
+
+		return l;
+	}
+
+	//STL中同名函数
+	int upper_bound(int l, int r, int x)
+	{
+		while(l &lt; r)
+		{
+			int mid = (l + r + 1) &gt;&gt; 1;
+
+			if(check(mid))
+				l = mid;
+			else
+				r = mid - 1;
+		}
+
+		return l;
+	}
+
+#undef check_the_ans
+}
+
+//倍增算法
+namespace doubly
+{
+	namespace RMQ
+	{
+		//树状数组和线段树都可以解决的东西...
+		//CSP大概不会专门去考...这里略过
+	}
+
+	//简单的树上倍增，求LCA，求max，min（点权，边权类似）
+	namespace doubly_on_tree
+	{
+#define MAXN 50010;
+
+		const int N = MAXN;
+
+		int n;
+		int d[N], deep[N];
+		int f[N][20], max[N][20], min[N][20];
+
+		vector &lt;int &gt; link[N];
+
+		void init()
+		{
+			memset(f, 0, sizeof(f));
+			memset(deep, 0, sizeof(deep));
+			memset(link, 0, sizeof(link));
+			memset(max, 0xef, sizeof(max));
+			memset(min, 0x3f, sizeof(min));
+		}
+
+		void dfs(int root, int fa)
+		{
+			deep[root] = deep[fa] + 1, f[root][0] = fa;
+			max[root][0] = d[root], min[root][0] = d[root];
+
+			for(int k = 1; k &lt; 20; k++)
+				f[root][k] = f[f[root][k - 1]][k - 1];
+			for(int k = 1; k &lt; 20; k++)
+				max[root][k] = std::max(max[f[root][k - 1]][k - 1], max[root][k - 1]);
+			for(int k = 1; k &lt; 20; k++)
+				min[root][k] = std::min(min[f[root][k - 1]][k - 1], min[root][k - 1]);
+
+			for(int k = 0; k &lt; (int )link[root].size(); k++)
+			{
+				int to = link[root][k];
+
+				if(to != fa)
+					dfs(to, root);
+			}
+		}
+
+		void LCA(int a, int b, int &amp; lca, int &amp; Max, int &amp; Min)
+		{
+			if(deep[a] &lt; deep[b]) std::swap(a, b);
+
+			for(int k = 19; k &gt;= 0; k--)
+				if(deep[a] - (1 &lt;&lt; k) &gt;= deep[b])
+					Max = std::max(Max, max[a][k]), Min = std::min(Min, min[a][k]), a = f[a][k];
+
+			lca = a;
+
+			if(a == b)
+				return ;
+
+			for(int k = 19; k &gt;= 0; k--)
+				if(f[a][k] != f[b][k])
+				{
+					Max = std::max(Max, max[a][k]), Min = std::min(Min, min[a][k]), a = f[a][k];
+					Max = std::max(Max, max[b][k]), Min = std::min(Min, min[b][k]), b = f[b][k];
+				}
+
+			lca = f[a][0], Max = std::max(Max, max[a][0]), Min = std::min(Min, min[b][0]);
+		}
+
+#undef MAXN
+	}
+}
+
+//分治思想，模板似乎只有归并排序了
+namespace divide_and_conquer
+{
+	//归并排序（包括求逆序对）
+	namespace merge_sort
+	{
+#define MAXN 1000010
+#define mid ((l+r)&gt;&gt;1)
+
+		const int N = MAXN;
+		int n, d[N], sub[N];
+
+		int rev;
+
+		//conquer
+		void Union(int l, int r)
+		{
+			int L = l, R = mid + 1 , wz = l;
+
+			while(L != mid + 1 &amp;&amp; R != r + 1)
+			{
+				if(d[L] &gt; d[R])
+					rev += mid - L + 1, sub[wz++] = d[R++];
+				else
+					sub[wz++] = d[L++];
+			}
+
+			while(L != mid + 1) sub[wz++] = d[L++];
+			while(R != r + 1) sub[wz++] = d[R++];
+
+			for(int k = l; k &lt;= r; k++)
+				d[k] = sub[k];
+		}
+
+		//divide
+		void sort(int l, int r)
+		{
+			if(l == r) return ;
+
+			sort(l, mid), sort(mid + 1, r);
+			Union(l, r);
+		}
+
+#undef mid
+#undef MAXN
+	}
+}
+
+//快读
+namespace quick_read
+{
+	//文件读入，不推荐使用
+	inline char new_getchar()
+	{
+		static char sz[2048];
+		static int size = 0, wz = 0;
+
+		if(size == wz)
+		{
+			wz = 0;
+			size = fread(sz, 1, 2048, stdin);
+
+			if(wz != size)
+				return sz[wz++];
+			else
+				return EOF;
+		}
+		else
+			return sz[wz++];
+	}
+
+	inline int read()
+	{
+		int neg = 1, x = 0, ch = '~';
+
+		while(!(ch &gt;= '0' &amp;&amp; ch &lt;= '9')) neg = (ch == '-') ? -1 : 1, ch = getchar();
+		while(ch &gt;= '0' &amp;&amp; ch &lt;= '9') x = (x &lt;&lt; 3) + (x &lt;&lt; 1) , x += ch - '0', ch = getchar();
+
+		return x * neg;
+	}
+}
+
+//分块
+namespace Blocking
+{
+	//这个大概真没什么固定的板子
+}
+
+//差分（包含前缀和）
+namespace difference
+{
+#define MAXN 50010;
+
+	//线上差分（树状数组维护可更优）
+	namespace line
+	{
+		const int N = MAXN;
+
+		int n, d[N];
+		int dif[N];
+
+		void init()
+		{
+			for(int k = 1; k &lt;= n; k++)
+				dif[k] = d[k] - d[k - 1];
+		}
+
+		void add(int l, int r , int key)
+		{
+			dif[l] += key, dif[r + 1] -= key;
+		}
+
+		int query(int x)
+		{
+			int ans = 0;
+
+			for(int k = 1; k &lt;= x; k++)
+				ans += dif[k];
+
+			return ans;
+		}
+	}
+
+	namespace tree
+	{
+		const int N = MAXN;
+
+		int cf[N], ans[N];
+
+		using namespace doubly::doubly_on_tree;
+
+		void add(int l, int r, int key)
+		{
+			int lca, a, b;
+			LCA(l, r, lca, a, b);
+
+			cf[l]++, cf[r]++, cf[lca]--, cf[f[lca][0]]--;
+		}
+
+		int query(int wz)
+		{
+			int answ = cf[wz];
+
+			for(int k = 0; k &lt; (int )link[wz].size(); k++)
+			{
+				int to = link[wz][k];
+
+				if(to != f[wz][0])
+					answ += query(to);
+			}
+
+			return ans[wz] = answ;
+		}
+	}
+
+#undef MAXN
+}
+
+//高精度...商和积懒得写了...以后直接上FFT
+namespace high_precision
+{
+#define MAXN 5000;
+
+	const int N = MAXN;
+
+	struct longest
+	{
+		int d[N];
+		bool rev;
+
+		longest ()
+		{
+			rev = false;
+			memset(d, 0, sizeof(d));
+		}
+
+		void ease_zero(longest &amp; x) const
+		{
+			for(int k = x.d[0]; k &gt;= 2; k--)
+				if(x.d[k] != 0)
+					break;
+				else
+					x.d[0]--;
+
+			if(x.rev == true &amp;&amp; x.d[0] == 1 &amp;&amp; x.d[1] == 0) x.rev = false;
+		}
+
+		bool operator &lt; (const longest &amp; other ) const
+		{
+			if(rev &amp;&amp; !other.rev)
+				return true;
+			if(!rev &amp;&amp; other.rev)
+				return false;
+			if(rev &amp;&amp; other.rev)
+			{
+				longest a = *this, b = other;
+				a.rev = false, b.rev = false;
+
+				return a &gt; b;
+			}
+
+			if(d[0] &gt; other.d[0])
+				return false;
+			if(d[0] &lt; other.d[0])
+				return true;
+
+			for(int k = d[0]; k &gt;= 1; k--)
+				if(d[k] &gt; other.d[k])
+					return false;
+				else if(d[k] &lt; other.d[k])
+					return true;
+
+			return false;
+		}
+
+		bool operator &gt; (const longest &amp; other ) const
+		{
+			if(rev &amp;&amp; !other.rev)
+				return true;
+			if(!rev &amp;&amp; other.rev)
+				return false;
+			if(rev &amp;&amp; other.rev)
+			{
+				longest a = *this, b = other;
+				a.rev = false, b.rev = false;
+
+				return a &lt; b;
+			}
+
+			if(d[0] &gt; other.d[0])
+				return true;
+			if(d[0] &lt; other.d[0])
+				return false;
+
+			for(int k = d[0]; k &gt;= 1; k--)
+				if(d[k] &gt; other.d[k])
+					return true;
+				else if(d[k] &lt; other.d[k])
+					return false;
+
+			return false;
+		}
+
+		bool operator == (const longest &amp; other2 ) const
+		{
+			return !(*this &lt; other2) &amp;&amp; !(*this &gt; other2);
+		}
+
+		longest operator + (const longest &amp; other ) const
+		{
+			if((rev &amp;&amp; other.rev) || (!rev &amp;&amp; !other.rev))
+			{
+				longest ans = longest();
+				ans.rev = rev;
+
+				int add = 0;
+				for(int k = 1; k &lt;= max(d[0], other.d[0]); k++)
+				{
+					ans.d[k] = d[k] + other.d[k] + add;
+
+					add = ans.d[k] / 10, ans.d[k] %= 10;
+				}
+
+				ans.d[0] = max(d[0], other.d[0]);
+
+				if(add)
+					ans.d[++ans.d[0]] = add;
+
+				return ans;
+			}
+			else
+			{
+				longest ans = longest(), a = *this, b = other;
+
+				a.rev = false, b.rev = false;
+				if(a &gt; b)   ans.rev = rev;
+				else if(a &lt; b) ans.rev = other.rev , swap(a, b);
+				else
+				{
+					longest x = longest();
+					x.d[0] = 1;
+
+					return x;
+				}
+
+				int less = 0;
+
+				for(int k = 1; k &lt;= a.d[0]; k++)
+				{
+					ans.d[k] = a.d[k] - b.d[k] - less;
+
+					if(ans.d[k] &lt; 0)
+						ans.d[k] += 10, less = 1;
+					else
+						less = 0;
+				}
+				ans.d[0] = a.d[0];
+				ease_zero(ans);
+
+				return ans;
+			}
+		}
+
+		longest operator - (const longest &amp; other) const
+		{
+			longest a = other;
+			a.rev = a.rev == true ? false : true;
+
+			return *this + a;
+		}
+	};
+
+	longest read()
+	{
+		longest a = longest();
+
+		int ch = '~';
+
+		while(!(ch &gt;= '0' &amp;&amp; ch &lt;= '9')) a.rev = ch == '-', ch = getchar();
+		while(ch &gt;= '0' &amp;&amp; ch &lt;= '9') a.d[++a.d[0]] = ch - '0', ch = getchar();
+
+		for(int p = 1, q = a.d[0]; p &lt; q; p++, q--) swap(a.d[p], a.d[q]);
+
+		return a;
+	}
+
+	void print(const longest &amp; a)
+	{
+		if(a.rev)
+			putchar('-');
+
+		for(int k = a.d[0]; k &gt;= 1; k--)
+			putchar(a.d[k] + '0');
+	}
+
+#undef MAXN
+}
+
+//排序（你还能比sort快？）
+namespace sort
+{
+	//std::sort();
+}
+
+//------------------------------分割线------------------------------//
+
+//  数据结构  //
+
+//栈（你还能比stack好写？）
+namespace stack
+{
+	//std::stack
+}
+
+//队列（你还能比queue好写？）
+namespace queue
+{
+	//std::queue
+}
+
+//朴素堆（你还能比priority_queue好写？）
+namespace priority_queue
+{
+	//std::priority_queue
+}
+
+//双端队列 （你还能比deque好写？）
+namespace deque
+{
+	//std::deque
+}
+
+//冰茶姬
+namespace union_find_set
+{
+#define MAXN 10010;
+
+	const int N = MAXN;
+	int fa[N], n;
+
+	void init()
+	{
+		for(int k = 1; k &lt;= n; k++)
+			fa[k] = k;
+	}
+
+	int find(int x)
+	{
+		return x == fa[x] ? x : fa[x] = find(fa[x]);
+	}
+
+	void Union(int a, int b)
+	{
+		fa[find(a)] = find(b);
+	}
+
+	bool check(int a, int b)
+	{
+		return find(a) == find(b);
+	}
+
+#undef MAXN
+}
+
+//树状数组
+namespace binary_indexed_tree
+{
+#define MAXN 500010;
+	const int N = MAXN;
+
+	int lowbit(int x)
+	{
+		return x &amp; (-x);
+	}
+
+	int n, d[N], f[N];
+
+	namespace change_point_query_segment
+	{
+		void add(int wz, int key)
+		{
+			d[wz] += key;
+
+			for(int k = wz; k &lt;= n; k += lowbit(k))
+				f[k] += key;
+		}
+
+		int query(int l, int r)
+		{
+			int cnt1 = 0, cnt2 = 0;
+
+			for(int k = l - 1; k &gt; 0; k -= lowbit(k))
+				cnt1 += f[k];
+			for(int k = r; k &gt; 0; k -= lowbit(k))
+				cnt2 += f[k];
+
+			return cnt2 - cnt1;
+		}
+
+		void init()
+		{
+			for(int k = 1; k &lt;= n; k++)
+				f[k] = query(k - lowbit(k) + 1, k - 1) + d[k];
+		}
+	}
+
+	namespace change_segment_query_point
+	{
+		void init()
+		{
+			for(int k = n; k &gt;= 1; k--)
+				d[k] = d[k] - d[k - 1];
+
+			change_point_query_segment::init();
+		}
+
+		void add(int l, int r, int x)
+		{
+			change_point_query_segment::add(l, x);
+			change_point_query_segment::add(r + 1, -x);
+		}
+
+		int query(int x)
+		{
+			return change_point_query_segment::query(1, x);
+		}
+	}
+
+#undef MAXN
+}
+
+//线段树（以线段树模板为例）
+namespace segment_tree
+{
+#define MAXN 100010;
+#define lc tree[root].ls
+#define rc tree[root].rs
+#define mid ((tree[root].r + tree[root].l) &gt;&gt; 1)
+
+	const int N = MAXN;
+
+	struct node
+	{
+		int l, r, ls, rs;
+		int sum, add, mult;
+	} tree[N * 2];
+
+	int tot, tot_root;
+	int n, d[N] , P;
+
+	void push_up(int root)
+	{
+		tree[root].sum = tree[lc].sum + tree[rc].sum, tree[root].sum %= P;
+	}
+
+	void push_down(int root)
+	{
+		if(tree[root].mult != 1)
+		{
+			tree[lc].mult *= tree[root].mult , tree[rc].mult *= tree[root].mult;
+			tree[lc].add *= tree[root].mult , tree[rc].add *= tree[root].mult;
+			tree[lc].sum *= tree[root].mult , tree[rc].sum *= tree[root].mult ;
+			tree[lc].mult %= P, tree[lc].add %= P, tree[lc].sum %= P;
+			tree[rc].mult %= P, tree[rc].add %= P, tree[rc].sum %= P;
+
+			tree[root].mult = 1;
+		}
+
+		if(tree[root].add != 0)
+		{
+			tree[lc].add += tree[root].add ;
+			tree[lc].sum += (tree[lc].r - tree[lc].l + 1) * tree[root].add ;
+			tree[rc].add += tree[root].add ;
+			tree[rc].sum += (tree[rc].r - tree[rc].l + 1) * tree[root].add ;
+
+			tree[lc].add %= P, tree[lc].sum %= P;
+			tree[rc].add %= P, tree[rc].sum %= P;
+
+			tree[root].add = 0;
+		}
+	}
+
+	void creat(int &amp; root, int l, int r)
+	{
+		root = ++tot, tree[root].l = l, tree[root].r = r;
+		tree[root].mult = 1;
+
+		if(l != r)
+			creat(lc, l, mid), creat(rc, mid + 1, r) , push_up(root);
+		else
+			tree[root].sum = d[l];
+	}
+
+	void Add(int root, int l, int r, int key)
+	{
+		if(l &lt;= tree[root].l &amp;&amp; r &gt;= tree[root].r)
+		{
+			tree[root].add += key;
+			tree[root].sum += ((tree[root].r - tree[root].l + 1) % P) * key;
+
+			tree[root].add %= P , tree[root].sum %= P;
+
+			return ;
+		}
+
+		push_down(root);
+
+		if(r &lt;= mid) Add(lc, l, r, key);
+		else if(l &gt; mid) Add(rc, l, r, key);
+		else Add(lc, l, mid, key), Add(rc, mid + 1, r, key);
+
+		push_up(root);
+	}
+
+	void Mult(int root, int l, int r, int key)
+	{
+		if(l &lt;= tree[root].l &amp;&amp; r &gt;= tree[root].r)
+		{
+			tree[root].mult *= key, tree[root].add *= key, tree[root].sum *= key;
+			tree[root].mult %= P , tree[root].add %= P , tree[root].sum %= P;
+
+			return ;
+		}
+
+		push_down(root);
+
+		if(r &lt;= mid) Mult(lc, l, r, key);
+		else if(l &gt; mid) Mult(rc, l, r, key);
+		else Mult(lc, l, mid, key), Mult(rc, mid + 1, r, key);
+
+		push_up(root);
+	}
+
+	int Query(int root, int l, int r)
+	{
+		if(l &lt;= tree[root].l &amp;&amp; tree[root].r &lt;= r)
+		{
+			return tree[root].sum % P;
+		}
+
+		push_down(root);
+
+		if(r &lt;= mid) return Query(lc, l, r);
+		else if(l &gt; mid) return Query(rc, l, r);
+		else return (Query(lc, l, mid) + Query(rc, mid + 1, r)) % P;
+	}
+
+#undef MAXN
+#undef lc
+#undef rc
+#undef mid
+}
+
+//树链剖分（以树链剖分模板为例）
+namespace tree_chain_partition
+{
+	using namespace segment_tree;
+
+	int cnt[N], h_son[N], size[N], fa[N] , top[N], ori[N], deep[N], Tot;
+	vector &lt;int &gt; link[N];
+
+	void dfs1(int wz, int fat)
+	{
+		size[wz] = 1, fa[wz] = fat , deep[wz] = deep[fat] + 1;
+
+		for(int k = 0; k &lt; (int )link[wz].size(); k++)
+		{
+			int to = link[wz][k];
+
+			if(to == fat) continue;
+
+			dfs1(to, wz), size[wz] += size[to], h_son[wz] = size[h_son[wz]] &lt; size[to] ? to : h_son[wz];
+		}
+	}
+
+	void dfs2(int wz, int Top)
+	{
+		cnt[wz] = ++Tot, d[Tot] = ori[wz], top[wz] = Top;
+
+		if(!h_son[wz])
+			return ;
+
+		dfs2(h_son[wz], Top);
+
+		for(int k = 0; k &lt; (int )link[wz].size(); k++)
+		{
+			int to = link[wz][k];
+
+			if(to == fa[wz] || to == h_son[wz]) continue;
+
+			dfs2(to, to);
+		}
+	}
+
+	void add(int x, int y, int z)
+	{
+		int top_x = top[x], top_y = top[y];
+
+		while(top_x != top_y)
+		{
+			if(deep[top_x] &lt; deep[top_y])
+				Add(tot_root, cnt[top_y], cnt[y], z), y = fa[top_y], top_y = top[y];
+			else
+				Add(tot_root, cnt[top_x], cnt[x], z), x = fa[top_x], top_x = top[x];
+		}
+
+		if(deep[x] &lt; deep[y])
+			Add(tot_root, cnt[x], cnt[y], z);
+		else
+			Add(tot_root, cnt[y], cnt[x], z);
+	}
+
+	int query(int x, int y)
+	{
+		int answ = 0;
+
+		int top_x = top[x], top_y = top[y];
+
+		while(top_x != top_y)
+		{
+			if(deep[top_x] &lt; deep[top_y])
+				answ += Query(tot_root, cnt[top_y], cnt[y]), y = fa[top_y], top_y = top[y], answ %= P;
+			else
+				answ += Query(tot_root, cnt[top_x], cnt[x]), x = fa[top_x], top_x = top[x], answ %= P;
+		}
+
+		if(deep[x] &lt; deep[y])
+			answ += Query(tot_root, cnt[x], cnt[y]), answ %= P;
+		else
+			answ += Query(tot_root, cnt[y], cnt[x]), answ %= P;
+
+		return answ;
+	}
+}
+
+//莫队算法（以HH的项链为例）
+namespace modui
+{
+#define MAXN 1000010;
+
+	const int N = MAXN;
+
+	int ans[N], d[N];
+	int n, m , block_num;
+
+	struct node
+	{
+		int block, id;
+		int l, r;
+
+		bool operator &lt; (const node &amp; other ) const
+		{
+			return block ^ other.block ? l &lt; other.l : ((block &amp; 1) ? r&lt;other.r : r&gt;other.r);
+		}
+	} ques[N];
+
+	int cnt[N], color;
+
+	void add(int wz)
+	{
+		if(cnt[d[wz]]++ == 0)
+			color++;
+	}
+	void less(int wz)
+	{
+		if(--cnt[d[wz]] == 0)
+			color--;
+	}
+
+	void modui()
+	{
+		scanf(&quot;%lld&quot;, &amp;n);
+		for(int k = 1; k &lt;= n; k++)
+			scanf(&quot;%lld&quot;, &amp;d[k]);
+
+		scanf(&quot;%lld&quot;, &amp;m);
+
+		block_num = sqrt(m);
+
+		for(int k = 1; k &lt;= m; k++)
+		{
+			scanf(&quot;%lld %lld&quot;, &amp;ques[k].l, &amp;ques[k].r);
+
+			ques[k].id = k, ques[k].block = ques[k].l / block_num + 1;
+		}
+
+		std::sort(ques + 1, ques + 1 + m);
+
+		int L = ques[1].l, R = ques[1].r;
+		for(int k = L; k &lt;= R; k++) add(k);
+
+		for(int k = 1; k &lt;= m; k++)
+		{
+			int l = ques[k].l, r = ques[k].r;
+
+			while(L &lt; l) less(L++);
+			while(L &gt; l) add(--L);
+			while(R &gt; r) less(R--);
+			while(R &lt; r) add(++R);
+
+			ans[ques[k].id] = color;
+		}
+
+		for(int k = 1; k &lt;= m; k++)
+			printf(&quot;%lld\n&quot;, ans[k]);
+	}
+
+#undef MAXN
+}
+
+//------------------------------分割线------------------------------//
+
+//  基础数学  //
+
+namespace Erato
+{
+#define MAXN 10000010
+
+	const int N = MAXN;
+
+	bool not_prime[N];
+
+	void Erato()
+	{
+		not_prime[1] = true;
+
+		for(int k = 2; k &lt;= 10000000; k++)
+			if(!not_prime[k])
+				for(int i = k * k; i &lt;= 10000000; i += k)
+					not_prime[i] = true;
+	}
+
+#undef MAXN
+}
+
+namespace ex_gcd
+{
+	int ex_gcd(int a, int b, int &amp; x, int &amp; y)
+	{
+		if(b == 0)
+		{
+			x = 1, y = 0;
+			return a;
+		}
+
+		int ans = ex_gcd(b, a % b , y , x);
+		y -= x * (a / b);
+
+		return ans;
+	}
+}
+
+namespace quick_pow
+{
+	int P;
+
+	int quick_pow(int a, int x)
+	{
+		if(a == 0) return 0;
+
+		int answ = 1, mult = a;
+
+		while(x)
+		{
+			if(x &amp; 1)
+				answ *= mult, answ %= P;
+
+			mult *= mult, mult %= P, x &gt;&gt;= 1;
+		}
+
+		return answ % P;
+	}
+
+}
+
+//------------------------------分割线------------------------------//
+
+//  图论  //
+
+//最短路
+namespace shortest_path
+{
+	namespace Floyd
+	{
+		const int N = 310;
+
+		int dis[N][N], n;
+
+		void Floyd()
+		{
+			for(int k = 1; k &lt;= n; k++)
+				for(int i = 1; i &lt;= n; i++)
+					for(int j = 1; j &lt;= n; j++)
+						if(k != i &amp;&amp; k != j &amp;&amp; i != j)
+							if(dis[i][k] + dis[k][j] &lt; dis[i][j])
+								dis[i][j] = dis[i][k] + dis[k][j];
+		}
+	}
+
+#define MAXN 10010
+
+	struct node
+	{
+		int to, len;
+
+		node (int a, int b)
+		{
+			to = a, len = b;
+		}
+		node () { }
+	};
+
+	vector &lt;node &gt; link[MAXN];
+	int S, E, dis[MAXN];
+
+	namespace dij
+	{
+		bool solved[MAXN];
+
+		struct node0
+		{
+			int dis, wz;
+
+			node0 (int a, int b)
+			{
+				dis = b, wz = a;
+			}
+			node0 () { }
+
+			bool operator &lt; (const node0 &amp; other ) const
+			{
+				return dis &gt; other.dis;
+			}
+		};
+		std::priority_queue &lt;node0 &gt; q;
+
+		void dij()
+		{
+			memset(dis, 0x3f, sizeof(dis));
+			q.push(node0(S, 0)), dis[S] = 0;
+
+			while(!q.empty())
+			{
+				int wz = q.top().wz;
+				q.pop();
+
+				if(solved[wz]) continue;
+				solved[wz] = true;
+
+				for(int k = 0; k &lt; (int )link[wz].size(); k++)
+				{
+					int to = link[wz][k].to;
+					int len = link[wz][k].len;
+
+					if(dis[wz] + len &lt; dis[to])
+					{
+						dis[to] = dis[wz] + len;
+
+						q.push(node0(to, dis[to]));
+					}
+				}
+			}
+		}
+	}
+
+	namespace SPFA
+	{
+		bool in[MAXN];
+		std::deque &lt;int &gt; q;
+
+		void SPFA()
+		{
+			memset(dis, 0x3f, sizeof(dis));
+			q.push_back(S), in[S] = true, dis[S] = 0;
+
+			while(!q.empty())
+			{
+				int wz = q.front();
+				q.pop_front(), in[wz] = false;
+
+				for(int k = 0; k &lt; (int )link[wz].size(); k++)
+				{
+					int to = link[wz][k].to;
+					int len = link[wz][k].len;
+
+					if(dis[wz] + len &lt; dis[to])
+					{
+						dis[to] = dis[wz] + len;
+
+						if(!in[to])
+						{
+							in[to] = true;
+
+							if(q.empty() || dis[to] &lt; dis[q.front()])
+								q.push_front(to);
+							else
+								q.push_back(to);
+						}
+					}
+				}
+			}
+		}
+	}
+
+#undef MAXN
+}
+
+//最小生成树
+namespace minimum_spanning_tree
+{
+	int m;
+
+	struct node
+	{
+		int a, b, c;
+
+		node (int aa, int bb, int cc)
+		{
+			a = aa, b = bb, c = cc;
+		}
+		node () { }
+
+		bool operator &lt; (const node &amp; other) const
+		{
+			return c &lt; other.c;
+		}
+	};
+	vector &lt;node &gt; link;
+
+	namespace Kruskal
+	{
+		using namespace union_find_set;
+
+		int Kruskal()
+		{
+			init();
+
+			std::sort(link.begin(), link.end());
+
+			int tot = 0, answ = 0;
+			for(int k = 0; k &lt; (int )link.size(); k++)
+			{
+				if(tot == n - 1)
+					break;
+
+				int a = link[k].a, b = link[k].b, c = link[k].c;
+
+				if(find(a) != find(b))
+					fa[fa[a]] = fa[b], tot++, answ += c;
+			}
+
+			return answ;
+		}
+	}
+}
+
+//tarjan缩点+topo（以UVA11324 The Largest Clique为例）
+namespace taropo
+{
+	const int N = 1010;
+	const int M = 50010;
+
+	int tot, n, m , color ;
+
+	int dfn[N], low[N] , col_p[N];
+	int ind[N], max[N] , d[N];
+
+	bool in[N];
+
+	std::stack &lt;int &gt; s;
+	std::vector &lt;int &gt; link[N];
+	std::vector &lt;int &gt; new_link[N];
+
+	void init()
+	{
+		memset(link, 0, sizeof(link));
+		memset(new_link, 0, sizeof(new_link));
+		memset(dfn, 0, sizeof(dfn));
+		memset(low, 0, sizeof(low));
+		memset(max, 0, sizeof(max));
+		memset(d, 0, sizeof(d));
+		tot = 0 , color = 0;
+
+		scanf(&quot;%lld %lld&quot;, &amp;n, &amp;m);
+		for(int k = 1; k &lt;= m; k++)
+		{
+			int u, v;
+			scanf(&quot;%lld %lld&quot;, &amp;u, &amp;v);
+
+			link[u].push_back(v);
+		}
+	}
+
+	void tarjan(int wz)
+	{
+		dfn[wz] = low[wz] = ++tot;
+		in[wz] = true, s.push(wz);
+
+		for(int k = 0; k &lt; (int )link[wz].size() ; k++)
+		{
+			int to = link[wz][k];
+
+			if(!dfn[to])
+				tarjan(to), low[wz] = std::min(low[wz], low[to]);
+			else low[wz] = std::min(low[wz], dfn[to]);
+		}
+
+		if(dfn[wz] == low[wz])
+		{
+			color++;
+
+			while(s.top() != wz)
+			{
+				in[s.top()] = false;
+				col_p[s.top()] = color;
+
+				s.pop(), d[color]++;
+			}
+
+			in[wz] = false;
+			col_p[wz] = color;
+
+			s.pop() , d[color]++;
+		}
+	}
+
+	void build_link()
+	{
+		for(int k = 1; k &lt;= n; k++)
+			for(int i = 0; i &lt; (int )link[k].size() ; i++)
+			{
+				int to = link[k][i];
+
+				if(col_p[to] != col_p[k])
+					new_link[col_p[k]].push_back(col_p[to]), ind[col_p[to]]++;
+			}
+	}
+
+	void topu()
+	{
+		int answ = 0;
+
+		std::queue &lt;int &gt; q;
+
+		for(int k = 1; k &lt;= color; k++)
+			if(!ind[k])
+				q.push(k), max[k] = d[k];
+
+		while(!q.empty() )
+		{
+			int wz = q.front();
+			q.pop();
+
+			for(int k = 0; k &lt; (int )new_link[wz].size() ; k++)
+			{
+				int to = new_link[wz][k];
+
+				max[to] = std::max(max[to], max[wz] + d[to]);
+
+				if(--ind[to] == 0)
+					q.push(to);
+			}
+		}
+
+		for(int k = 1; k &lt;= color; k++)
+			answ = std::max(answ, max[k]);
+
+		printf(&quot;%lld\n&quot;, answ);
+	}
+
+	void taropo()
+	{
+		for(int k = 1; k &lt;= n; k++)
+			if(!dfn[k])
+				tarjan(k);
+
+		build_link();
+
+		topu();
+	}
+}
+
+//差分约束（以P1250种树为例）
+namespace difference_constraint
+{
+#define MAXN 30010;
+
+	const int N = MAXN;
+
+	struct node
+	{
+		int to, len;
+
+		node (int a, int b)
+		{
+			to = a, len = b;
+		}
+		node () { }
+	};
+	vector &lt;node &gt; link[N];
+
+	int dis[N];
+	bool in[N];
+
+	std::queue &lt;int &gt; q;
+
+	int n, m;
+	void init()
+	{
+		scanf(&quot;%lld&quot;, &amp;n);
+		for(int k = 1; k &lt;= n; k++)
+			link[k].push_back(node(k - 1, -1)), link[k - 1].push_back(node(k, 0));
+
+		scanf(&quot;%lld&quot;, &amp;m);
+		for(int k = 1; k &lt;= m; k++)
+		{
+			int b, e, t;
+			scanf(&quot;%lld %lld %lld&quot;, &amp;b, &amp;e, &amp;t);
+
+			link[b - 1].push_back(node(e, t));
+			link[e].push_back(node(b - 1, b - e - 1));
+		}
+	}
+
+	void SPFA()
+	{
+		memset(dis, 0xef, sizeof(dis));
+		q.push(0), in[0] = true, dis[0] = 0;
+
+		while(!q.empty())
+		{
+			int wz = q.front();
+			q.pop(), in[wz] = false;
+
+			for(int k = 0; k &lt; (int )link[wz].size(); k++)
+			{
+				int to = link[wz][k].to;
+				int len = link[wz][k].len;
+
+				if(dis[wz] + len &gt; dis[to])
+				{
+					dis[to] = dis[wz] + len;
+
+					if(!in[to])
+						in[to] = true, q.push(to);
+				}
+			}
+		}
+
+		printf(&quot;%lld&quot;, dis[n]);
+	}
+
+#undef MAXN
+}
+
+//tarjan求割点/割边
+namespace tarjan
+{
+	const int N = 20010;
+	const int M = 100010;
+
+	int dfn[N], low[N];
+	int tot, n, m, num , cnt;
+
+	struct node
+	{
+		int to, num;
+
+		node (int a, int b)
+		{
+			to = a, num = b;
+		}
+		node () { }
+	};
+
+	vector &lt;node &gt; link[N];
+
+	void init()
+	{
+		scanf(&quot;%lld %lld&quot;, &amp;n, &amp;m);
+		for(int k = 1; k &lt;= m; k++)
+		{
+			int a, b;
+			scanf(&quot;%lld %lld&quot;, &amp;a, &amp;b);
+
+			link[a].push_back(node(b, k));
+			link[b].push_back(node(a, k));
+		}
+	}
+
+	namespace cut_point
+	{
+		bool cut[N];
+
+		void tarjan(int wz, int fa)
+		{
+			dfn[wz] = low[wz] = ++tot;
+
+			int flag = 0;
+
+			for(int k = 0; k &lt; (int )link[wz].size(); k++)
+			{
+				int to = link[wz][k].to;
+
+				if(!dfn[to])
+				{
+					tarjan(to, wz), low[wz] = min(low[wz], low[to]);
+
+					if(low[to] &gt;= dfn[wz])
+						if(wz != fa || flag++)
+							if(!cut[wz])
+								cut[wz] = true, num++;
+				}
+				else
+					low[wz] = min(low[wz], dfn[to]);
+			}
+		}
+	}
+
+	namespace cut_edge
+	{
+		bool cut[M];
+
+		void tarjan(int wz)
+		{
+			dfn[wz] = low[wz] = ++tot;
+
+			for(int k = 0; k &lt; (int )link[wz].size(); k++)
+			{
+				int to = link[wz][k].to;
+				int num = link[wz][k].num;
+
+				if(!dfn[to])
+				{
+					tarjan(to), low[wz] = min(low[wz], low[to]);
+
+					if(low[to] &gt; dfn[wz])
+						cut[num] = true, cnt++;
+				}
+				else
+					low[wz] = min(low[wz], dfn[to]);
+			}
+		}
+	}
+}
+
+//匈牙利算法
+namespace hungary
+{
+	const int N = 1010;
+
+	vector &lt;int &gt; link[N * 2];
+
+	int left[N * 2], n, m, e;
+
+	bool used[N * 2];
+
+	void init()
+	{
+		scanf(&quot;%lld %lld %lld&quot;, &amp;n, &amp;m, &amp;e);
+
+		for(int k = 1; k &lt;= e; k++)
+		{
+			int u, v;
+			scanf(&quot;%lld %lld&quot;, &amp;u, &amp;v);
+
+			if(v &gt; m || u &gt; n) continue;
+
+			link[u].push_back(v);
+		}
+	}
+
+	bool find_right(int x)
+	{
+		for(int k = 0; k &lt; (int )link[x].size(); k++)
+		{
+			int to = link[x][k];
+
+			if(!used[to])
+			{
+				used[to]=true;
+				
+				if(!left[to] || find_right(left[to]))
+				{
+					left[to] = x;
+					
+					return true;
+				}
+			}
+		}
+
+		return false;
+	}
+
+	void hungary()
+	{
+		int answ = 0;
+
+		for(int k = 1; k &lt;= n; k++)
+		{
+			memset(used, 0, sizeof(used));
+
+			if(find_right(k))
+				answ++;
+		}
+
+		printf(&quot;%lld&quot;, answ);
+	}
+
+}
+
+//------------------------------分割线------------------------------//
+
+signed main()
+{
+	return 0;
+}
+
+</code></pre>
+
+              </div>
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Sata_星空&#39;s Blog
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://sata-moto.github.io/post/csp-mo-ban" title="CSP 模板">CSP 模板</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://sata-moto.github.io/tag/c8lubDvLz"># 模板</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="斜率优化学习笔记" href="https://sata-moto.github.io/post/xie-lu-you-hua-xue-xi-bi-ji">斜率优化学习笔记</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="斜率优化学习笔记" href="https://sata-moto.github.io/post/xie-lu-you-hua-xue-xi-bi-ji">上一篇</a>
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="单调栈与单调队列略讲" href="https://sata-moto.github.io/post/dan-diao-zhan-yu-dan-diao-dui-lie-lue-jiang">单调栈与单调队列略讲</a>
+        <a class="nav-mobile-next" title="单调栈与单调队列略讲" href="https://sata-moto.github.io/post/dan-diao-zhan-yu-dan-diao-dui-lie-lue-jiang">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      © 2019-2020 <i class="fa fa-heart"></i> HsxyHao
+    </div>
+    <div class="poweredby">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+  </footer>
+  
+  
+  <div class="gemini back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+    <div class="bg-img">
+      <img src="\media\images\custom-bgImg.png" />
+    </div>
+  
+  
+    <link rel="stylesheet" href="/media/live2d/histoire/css/live2d.css" />
+<div class="box-scale">
+  <div id="landlord" style="left:5px;bottom:0px;" data-key="">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    <div class="live_talk_input_body">
+      <div class="live_talk_input_name_body">
+        <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字" />
+      </div>
+      <div class="live_talk_input_text_body">
+        <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？"/>
+        <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+      </div>
+    </div>
+    <input name="live_talk" id="live_talk" value="1" type="hidden" />
+    <div class="live_ico_box">
+      <div class="live_ico_item type_info" id="showInfoBtn"></div>
+      <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+      
+      <div class="live_ico_item type_music" id="musicButton"></div>
+      
+      <div class="live_ico_item type_youdu" id="youduButton"></div>
+      <div class="live_ico_item type_quit" id="hideButton"></div>
+      <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+      <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+      <input id="duType" value="douqilai" type="hidden">
+      
+        <input name="live2dBGM" value="https://sh-ctfs.ftn.qq.com/ftn_handler/541a344d36c648ca8a73d837aee6d96f0e2e84f96cf6656087f2247374597bce9531fee2d4f377f5ca13d076b4010b3d32bd4b49d9c3fbc8c9262a653e155e31/?fname=%E9%83%91%E6%AF%85%20-%20%E8%B4%9D%E5%A4%9A%E8%8A%AC%E7%9A%84%E6%82%B2%E4%BC%A4.mp3&amp;k=2a313635423aae9ad274df8417630b4a5f03010707025c524b525351534e0d5d57501b0c5250584804010f060454585d05525500317439b3c5e3d5151c4388d1d0d181e784a788caaffa185841503958&amp;code=f1651c9e&amp;fr=00&amp;&amp;txf_fid=6f2790c50bce6e96ec1187e4a07f3bef4690bec5&amp;xffz=6858381" type="hidden">
+      
+    </div>
+  </div>
+</div>
+<div id="open_live2d">召唤伊斯特瓦尔</div>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+var message_Path = '/media/live2d/histoire/';
+let landlord = document.querySelector('#landlord');
+var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="/media/live2d/histoire/js/live2d.js"></script>
+<script type="text/javascript" src="/media/live2d/histoire/js/message.js"></script>
+  
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text'),
+  drawerBox = document.querySelector('#drawer_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  
+  let hasCacu = false;
+  window.onresize = function() {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+  
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function() {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, transitionDir,{ });
+          }
+        })
+        window.Velocity(viewport, openProp,{
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp ,{
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+</script>
+    </div>
+  </body>
+  <script src="/media/js/motion.js"></script>
+</html>
