@@ -1894,7 +1894,13 @@ body {
         width: 960px;
         margin: 0 auto;
       }
-    body {
+    @font-face {
+      font-family: 'fzqtjt.ttf';
+      src: url('/media/fonts/fzqtjt.ttf.ttf');
+    }
+    * {
+        font-family: 'fzqtjt.ttf';
+    }body {
       color: #343a40;
     }
     .next-md-body {
@@ -1950,11 +1956,11 @@ body {
       }.nav-item a:hover {
         color: #343a40;
       }.nav-item-active {
-      background: #868e96;
+      background: #ced4da;
     }
 
     .nav-item:hover {
-      background: #868e96;
+      background: #ced4da;
       color: rgba(0, 0, 0, 0.98);
     }.markdownIt-TOC a {
       color: #eee;
