@@ -1895,39 +1895,39 @@ body {
         margin: 0 auto;
       }
     body {
-      color: #555;
+      color: #343a40;
     }
     .next-md-body {
-      color: #555;
+      color: #343a40;
     }
     .next-md-body h1, .next-md-body h2 {
-      border-bottom-color: #555;
+      border-bottom-color: #343a40;
     }
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: #555;
+      background: #343a40;
     }h1, h2, h3, h4, h5, h6 {
-      color: #555;
+      color: #212529;
     }
     
     .archive-timeline-title::before {
-      background-color: #555;
+      background-color: #212529;
     }
     
     .post-title-link::before {
-      background-color: #555;
+      background-color: #212529;
     }
     
     .node-title::before {
-      background-color: #555;
+      background-color: #212529;
     }.bg-color {
       background-color: #fff;
     }a {
-      color: #555;
+      color: #868e96;
     }
     
     .next-md-body a, .friends-box a  {
-      color: #555;
-      border-bottom: 1px solid #555;
+      color: #868e96;
+      border-bottom: 1px solid #868e96;
     }a:hover {
       color: #222;
     }
@@ -1948,13 +1948,13 @@ body {
       .nav-item a {
         color:  #555;
       }.nav-item a:hover {
-        color: #222;
+        color: #343a40;
       }.nav-item-active {
-      background: #f9f9f9;
+      background: #e3fafc;
     }
 
     .nav-item:hover {
-      background: #f9f9f9;
+      background: #e3fafc;
       color: rgba(0, 0, 0, 0.98);
     }.markdownIt-TOC a {
       color: #eee;
@@ -1988,10 +1988,10 @@ body {
       background: #000 !important;
     }
     .main-title {
-      color: #FFF;
+      color: #e7f5ff;
     }
     .mist .site-title i {
-      background: #FFF;
+      background: #e7f5ff;
     }.box-shadow-wrapper {
       padding: 10px;
     }
