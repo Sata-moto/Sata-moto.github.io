@@ -7,8 +7,8 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="从远方而来，归往远方
 ">
-<link rel="shortcut icon" href="http://localhost:4000/favicon.ico?v=1580815341219">
-<link rel="stylesheet" href="http://localhost:4000/styles/main.css">
+<link rel="shortcut icon" href="https://sata-moto.github.io/favicon.ico?v=1580815388117">
+<link rel="stylesheet" href="https://sata-moto.github.io/styles/main.css">
 
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -144,7 +144,7 @@
             
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="http://localhost:4000/images/avatar.png"/>
+    <img class="site-author-image right-motion" src="https://sata-moto.github.io/images/avatar.png"/>
     <p class="site-author-name">Sata_星空&#39;s Blog</p>
     <p class="site-description right-motion">从远方而来,归往远方</p>
   </div>
@@ -174,7 +174,7 @@
       <div class="sidebar-item">
         <span class="site-item-rss">
             <i class="fa fa-rss"></i>
-            <a href="http://localhost:4000/atom.xml" target="_blank">RSS</a>
+            <a href="https://sata-moto.github.io/atom.xml" target="_blank">RSS</a>
         </span>
       </div>
     
@@ -471,7 +471,7 @@ window.addEventListener('load', function() {
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="http://localhost:4000/post/ji-chu-tu-lun-zhi-shi-tuo-zhan">
+    <a class="post-title-link" href="https://sata-moto.github.io/post/ji-chu-tu-lun-zhi-shi-tuo-zhan">
       基础图论知识拓展
     </a>
   </h1>
@@ -489,13 +489,13 @@ window.addEventListener('load', function() {
         <span class="pc-show">分类于</span>
         
           
-            <a href="http://localhost:4000/tag/DeagR58Ti">
+            <a href="https://sata-moto.github.io/tag/DeagR58Ti">
               <span>图论</span>
             </a>、
           
         
           
-            <a href="http://localhost:4000/tag/p5X0YCiSJ">
+            <a href="https://sata-moto.github.io/tag/p5X0YCiSJ">
               <span>知识点</span>
             </a>
           
@@ -751,7 +751,7 @@ else
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://localhost:4000/post/ji-chu-tu-lun-zhi-shi-tuo-zhan" title="基础图论知识拓展">基础图论知识拓展</a>
+      <a href="https://sata-moto.github.io/post/ji-chu-tu-lun-zhi-shi-tuo-zhan" title="基础图论知识拓展">基础图论知识拓展</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -760,28 +760,49 @@ else
   </ul>
   <div class="tags">
     
-      <a href="http://localhost:4000/tag/DeagR58Ti"># 图论</a>
+      <a href="https://sata-moto.github.io/tag/DeagR58Ti"># 图论</a>
     
-      <a href="http://localhost:4000/tag/p5X0YCiSJ"># 知识点</a>
+      <a href="https://sata-moto.github.io/tag/p5X0YCiSJ"># 知识点</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="manacher算法学习笔记" href="http://localhost:4000/post/manacher-suan-fa-xue-xi-bi-ji">manacher算法学习笔记</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="manacher算法学习笔记" href="http://localhost:4000/post/manacher-suan-fa-xue-xi-bi-ji">上一篇</a>
+        <a class="nav-pc-next" title="manacher算法学习笔记" href="https://sata-moto.github.io/post/manacher-suan-fa-xue-xi-bi-ji">manacher算法学习笔记</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="manacher算法学习笔记" href="https://sata-moto.github.io/post/manacher-suan-fa-xue-xi-bi-ji">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="【置顶】 博客索引" href="http://localhost:4000/post/zhi-ding-bo-ke-suo-yin">【置顶】 博客索引</a>
-        <a class="nav-mobile-next" title="【置顶】 博客索引" href="http://localhost:4000/post/zhi-ding-bo-ke-suo-yin">下一篇</a>
+        <a class="nav-pc-next" title="【置顶】 博客索引" href="https://sata-moto.github.io/post/zhi-ding-bo-ke-suo-yin">【置顶】 博客索引</a>
+        <a class="nav-mobile-next" title="【置顶】 博客索引" href="https://sata-moto.github.io/post/zhi-ding-bo-ke-suo-yin">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
 </div>
+              
+                
+                  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+                
+                
               
             </div>
           </div>
