@@ -1894,13 +1894,7 @@ body {
         width: 960px;
         margin: 0 auto;
       }
-    @font-face {
-      font-family: 'fzqtjt';
-      src: url('/media/fonts/fzqtjt.ttf');
-    }
-    * {
-        font-family: 'fzqtjt';
-    }body {
+    body {
       color: #343a40;
     }
     .next-md-body {
