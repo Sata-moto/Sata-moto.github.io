@@ -1895,11 +1895,11 @@ body {
         margin: 0 auto;
       }
     @font-face {
-      font-family: 'fzzt';
-      src: url('/media/fonts/fzzt.ttf');
+      font-family: 'fzzt.ttf';
+      src: url('/media/fonts/fzzt.ttf.ttf');
     }
     * {
-        font-family: 'fzzt';
+        font-family: 'fzzt.ttf';
     }body {
       color: #495057;
     }
@@ -1928,12 +1928,12 @@ body {
     }.bg-color {
       background-color: #f1f3f5;
     }a {
-      color: #99e9f2;
+      color: #1864ab;
     }
     
     .next-md-body a, .friends-box a  {
-      color: #99e9f2;
-      border-bottom: 1px solid #99e9f2;
+      color: #1864ab;
+      border-bottom: 1px solid #1864ab;
     }a:hover {
       color: #868e96;
     }
