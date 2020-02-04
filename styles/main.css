@@ -1894,7 +1894,13 @@ body {
         width: 960px;
         margin: 0 auto;
       }
-    body {
+    @font-face {
+      font-family: 'FZQTJW.TTF';
+      src: url('/media/fonts/FZQTJW.TTF.ttf');
+    }
+    * {
+        font-family: 'FZQTJW.TTF';
+    }body {
       color: #343a40;
     }
     .next-md-body {
