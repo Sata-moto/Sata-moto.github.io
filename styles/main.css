@@ -1895,11 +1895,11 @@ body {
         margin: 0 auto;
       }
     @font-face {
-      font-family: 'fontawesome-webfont';
-      src: url('/media/fonts/fontawesome-webfont.ttf');
+      font-family: '10223';
+      src: url('/media/fonts/10223.ttf');
     }
     * {
-        font-family: 'fontawesome-webfont';
+        font-family: '10223';
     }body {
       color: #495057;
     }
