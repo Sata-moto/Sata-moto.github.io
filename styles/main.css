@@ -1895,11 +1895,11 @@ body {
         margin: 0 auto;
       }
     @font-face {
-      font-family: '10223';
-      src: url('/media/fonts/10223.ttf');
+      font-family: '1022300';
+      src: url('/media/fonts/1022300.ttf');
     }
     * {
-        font-family: '10223';
+        font-family: '1022300';
     }body {
       color: #495057;
     }
