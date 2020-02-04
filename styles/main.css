@@ -1950,11 +1950,11 @@ body {
       }.nav-item a:hover {
         color: #343a40;
       }.nav-item-active {
-      background: #e3fafc;
+      background: #868e96;
     }
 
     .nav-item:hover {
-      background: #e3fafc;
+      background: #868e96;
       color: rgba(0, 0, 0, 0.98);
     }.markdownIt-TOC a {
       color: #eee;
