@@ -1926,7 +1926,7 @@ body {
     .node-title::before {
       background-color: #212529;
     }.bg-color {
-      background-color: #212529;
+      background-color: #f1f3f5;
     }a {
       color: #adb5bd;
     }
@@ -1988,10 +1988,10 @@ body {
       border-bottom-color: #fc6423;
     }
       .site-meta {
-        background: #495057 !important;
+        background: #212529 !important;
       }
     .brand {
-      background: #343a40 !important;
+      background: #212529 !important;
     }
     .main-title {
       color: #e7f5ff;
