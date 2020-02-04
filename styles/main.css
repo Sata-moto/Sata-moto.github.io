@@ -1884,7 +1884,7 @@ blockquote:before {
   font-weight: bold;
 }
 body {
-      background-color: #eee;
+      background-color: #f8f9fa;
     }.header {
         width: 960px;
         margin: 0 auto;
@@ -1920,7 +1920,7 @@ body {
     .node-title::before {
       background-color: #212529;
     }.bg-color {
-      background-color: #862e9c;
+      background-color: #212529;
     }a {
       color: #adb5bd;
     }
@@ -1982,10 +1982,10 @@ body {
       border-bottom-color: #fc6423;
     }
       .site-meta {
-        background: #748ffc !important;
+        background: #495057 !important;
       }
     .brand {
-      background: #000 !important;
+      background: #343a40 !important;
     }
     .main-title {
       color: #e7f5ff;
