@@ -1894,7 +1894,13 @@ body {
         width: 960px;
         margin: 0 auto;
       }
-    body {
+    @font-face {
+      font-family: 'fzzt';
+      src: url('/media/fonts/fzzt.ttf');
+    }
+    * {
+        font-family: 'fzzt';
+    }body {
       color: #495057;
     }
     .next-md-body {
