@@ -1993,11 +1993,7 @@ body {
     .brand {
       background: #212529 !important;
     }
-    
-      .brand {
-        font-weight: bold;
-        transform: scale(2);
-      }.main-title {
+    .main-title {
       color: #e7f5ff;
     }
     .mist .site-title i {
