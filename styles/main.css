@@ -1986,14 +1986,20 @@ body {
     .active-hidden > a {
       color: #fc6423;
       border-bottom-color: #fc6423;
-    }
+    }.site-nav, .sidebar-wrapper, .section-box, .sidebar-box, .site-nav, .blog-header {
+        opacity: 0.8;
+      }
       .site-meta {
         background: #212529 !important;
       }
     .brand {
       background: #212529 !important;
     }
-    .main-title {
+    
+      .brand {
+        font-weight: bold;
+        transform: scale(1.2);
+      }.main-title {
       color: #e7f5ff;
     }
     .mist .site-title i {
