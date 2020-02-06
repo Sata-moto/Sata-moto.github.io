@@ -1950,11 +1950,15 @@ body {
     .next-md-body a:hover, .friends-box a:hover {
       color: #868e96;
       border-bottom-color: #868e96;
-    }
-      .nav-item a {
-        color:  #555;
+    }.nav-item a {
+        color: #555;
+      }
+      .nav-item-active a {
+        color: #555;
+        border-bottom: 1px solid #555 !important;
       }.nav-item a:hover {
         color: #343a40;
+        border-bottom: 1px solid #343a40 !important;
       }.nav-item-active {
       background: #ced4da;
     }
@@ -1986,7 +1990,11 @@ body {
     .active-hidden > a {
       color: #fc6423;
       border-bottom-color: #fc6423;
-    }.site-nav, .sidebar-wrapper, .section-box, .sidebar-box, .site-nav, .blog-header {
+    }.header {
+        opacity: 0.8;
+        background-color: #fff;
+      }
+      .muse.section-layout {
         opacity: 0.8;
       }
       .site-meta {
