@@ -1963,8 +1963,8 @@ body {
       background: #ced4da;
       color: rgba(0, 0, 0, 0.98);
     }.markdownIt-TOC a {
-      color: #eee;
-      border-bottom-color: #eee;
+      color: #343a40;
+      border-bottom-color: #343a40;
     }.markdownIt-TOC a:hover {
       color: #fff;
       border-bottom-color: #fff;
@@ -2000,10 +2000,10 @@ body {
         font-weight: bold;
         transform: scale(1.2);
       }.main-title {
-      color: #e7f5ff;
+      color: #e9ecef;
     }
     .mist .site-title i {
-      background: #e7f5ff;
+      background: #e9ecef;
     }.box-shadow-wrapper {
       padding: 10px;
     }
