@@ -1997,9 +1997,57 @@ body {
       .muse.section-layout {
         opacity: 0.8;
       }
+        .header-box {
+          background-image: url(\media\images\custom-headerImg.png);
+          background-attachment: fixed;
+        }
+        .muse .blog-header {
+          padding: 50px 0 0 !important;
+          background-color: transparent !important;
+          overflow: unset !important;
+        }
+        .site-nav ul {
+          background: rgba(255,255,255,0.65);
+          box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.15);
+          padding: 10px 100px !important;
+        }
+        .site-nav {
+          margin: 40px 0 0 !important;
+        }
+        .muse.section-layout {
+          padding: 0px !important;
+          background-color: transparent !important;
+        }
+        .muse .post {
+          padding: 20px 40px !important;
+          -webkit-box-shadow: 0 0 50px rgba(202,203,203,0.5);
+          -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+        }
+      
       .site-meta {
         background: #212529 !important;
-      }
+      }.sidebar {
+      background-image: url(\media\images\custom-siteMetaImg.png) !important;
+    }
+    .sidebar-item-box a {
+      color: #eee;
+    }
+    .friends-title {
+      color: #eee;
+      border-top: 1px dotted #fff;
+    }
+    .friends-box a {
+      color: #eee;
+      border-bottom: 1px solid #eee;
+    }
+    .toc-wrapper a {
+      color: #eee;
+      border-bottom: 1px solid #eee;
+    }
+    .sidebar-title-item {
+      color: #eee;
+    }
+    
     .brand {
       background: #212529 !important;
     }
