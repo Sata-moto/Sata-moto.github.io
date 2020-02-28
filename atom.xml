@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sata-moto.github.io</id>
     <title>Sata_moto&apos;s Blog</title>
-    <updated>2020-02-28T00:57:19.440Z</updated>
+    <updated>2020-02-28T01:55:35.852Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sata-moto.github.io"/>
     <link rel="self" href="https://sata-moto.github.io/atom.xml"/>
@@ -11,6 +11,28 @@
     <logo>https://sata-moto.github.io/images/avatar.png</logo>
     <icon>https://sata-moto.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Sata_moto&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[配对堆学习笔记]]></title>
+        <id>https://sata-moto.github.io/post/u3KjOvd_5</id>
+        <link href="https://sata-moto.github.io/post/u3KjOvd_5">
+        </link>
+        <updated>2020-02-28T01:53:36.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="应该不会有人跑去写斐波那契堆的吧">应该不会有人跑去写斐波那契堆的吧？</h3>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="应该不会有人跑去写斐波那契堆的吧">应该不会有人跑去写斐波那契堆的吧？</h3>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最小割树（Gomory-Hu Tree）学习笔记]]></title>
+        <id>https://sata-moto.github.io/post/z50kIbs0G</id>
+        <link href="https://sata-moto.github.io/post/z50kIbs0G">
+        </link>
+        <updated>2020-02-28T01:50:52.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="不得不说树真是一种神奇的数据结构呢">不得不说，树真是一种神奇的数据结构呢。</h3>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="不得不说树真是一种神奇的数据结构呢">不得不说，树真是一种神奇的数据结构呢。</h3>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Splay 学习笔记]]></title>
         <id>https://sata-moto.github.io/post/splay-xue-xi-bi-ji</id>
