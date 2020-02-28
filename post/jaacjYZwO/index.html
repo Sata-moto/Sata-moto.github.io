@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>ODT 学习笔记 | Sata_moto&#39;s Blog</title>
+<meta name="keywords" content="Gridea静态个人博客">
+<meta name="description" content="从远方而来，归往远方
+">
+<link rel="shortcut icon" href="https://sata-moto.github.io/favicon.ico?v=1582855674310">
+<link rel="stylesheet" href="https://sata-moto.github.io/styles/main.css">
+
+<link rel="stylesheet" href="/media/css/gemini.css">
+
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/androidstudio.css" rel="stylesheet">  
+<script src="/media/hljs/highlight.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    <meta name="description" content="ODT 学习笔记" />
+    <meta name="keywords" content="知识点,数据结构" />
+  </head>
+  <body>
+    <div class="head-top-line"></div>
+    <div class="header-box">
+      
+<div class=" gemini">
+  <header class="header bg-color ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>Sata_moto&#39;s Blog</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">工于心，简于形</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            <li class="nav-item ">
+              
+                <a href="/">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            <li class="nav-item ">
+              
+                <a href="/archives">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            <li class="nav-item ">
+              
+                <a href="/tags">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            <li class="nav-item ">
+              
+                <a href="/post/about">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          <li class="nav-item">
+            <a>
+              <i class="fa fa-search"></i> 搜索
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+    </div>
+    <div class="main-continer">
+      
+      <div class="section-layout gemini ">
+        <div class="section-layout-wrapper">
+          
+
+<div class="sidebar">
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          <div class="post-side-meta" id="post_side_meta">
+            
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="https://sata-moto.github.io/images/avatar.png"/>
+    <p class="site-author-name">Sata_moto&#39;s Blog</p>
+    <p class="site-description right-motion">从远方而来,归往远方.</p>
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">15</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">9</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">9</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://sata-moto.github.io/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  <div class="sidebar-item sidebar-item-social">
+    <div class="social-item">
+      
+        <a href="">
+          <i class="fa fa-qq"></i> 2984854964
+        </a>
+      
+        <a href="https://www.luogu.com.cn/blog/Sata-mato/">
+          <i class="fa fa-user-circle"></i> luogu博客
+        </a>
+      
+      
+    </div>
+  </div>
+
+
+</div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E8%BF%99%E7%AF%87%E6%96%87%E7%AB%A0%E7%9A%84%E5%B0%81%E9%9D%A2%E5%9B%BE%E6%9E%9C%E7%84%B6%E5%BA%94%E8%AF%A5%E6%94%BE%E7%8F%82%E6%9C%B5%E8%8E%89%E5%90%A7">这篇文章的封面图...果然应该放珂朵莉吧？</a></li>
+<li><a href="#%E5%89%8D%E8%A8%80">前言：</a></li>
+<li><a href="#%E6%AD%A3%E6%96%87">正文：</a></li>
+<li><a href="#init-%E5%AE%9A%E4%B9%89%E5%92%8C%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>I</mi><mi>n</mi><mi>i</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Init</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault">n</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span></span></span></span> （定义和初始化）：</a></li>
+<li><a href="#split%E5%88%86%E8%A3%82"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>p</mi><mi>l</mi><mi>i</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Split</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span></span></span></span>（分裂）:</a></li>
+<li><a href="#assign%E5%90%88%E5%B9%B6op2"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>s</mi><mi>s</mi><mi>i</mi><mi>g</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">Assign</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span></span></span></span>（合并）[<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>p</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">op=2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>]:</a></li>
+<li><a href="#add%E5%8C%BA%E9%97%B4%E5%8A%A0op1"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>d</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Add</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault">d</span><span class="mord mathdefault">d</span></span></span></span>（区间加）[<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>p</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">op=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>]:</a></li>
+<li><a href="#kth%E5%8C%BA%E9%97%B4%E7%AC%ACk%E5%B0%8Fop3"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi><mi>t</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">Kth</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span></span></span></span>（区间第k小）[<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>p</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">op=3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span>]:</a></li>
+<li><a href="#sum%E5%8C%BA%E9%97%B4x%E6%AC%A1%E6%96%B9%E5%92%8Cop4"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>u</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">Sum</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span></span></span></span>（区间x次方和）[<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>p</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">op=4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span>]:</a></li>
+<li><a href="#%E7%BB%93%E8%AF%AD">结语：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
+        
+      </div>
+    </div>
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+
+  if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+    let hasFix = false;
+    let scrollEl = document.querySelector('.main-continer');
+    let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+    window.addEventListener('scroll', function(e) {
+    if (document.scrollingElement.scrollTop >= limitTop) {
+      if (!hasFix) {
+        sidebar.classList.add('sidebar-fixed');
+        hasFix = true;
+      }
+    } else {
+      if (hasFix) {
+        sidebar.classList.remove('sidebar-fixed');
+        hasFix = false;
+      }
+    }
+  });
+  }
+  
+</script>
+          <div class="section-box box-shadow-wrapper">
+            <div class="section bg-color post post-page">
+              <div class="article-box">
+    <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://sata-moto.github.io/post/jaacjYZwO">
+      ODT 学习笔记
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2020-02-28</span>
+    </span>
+    
+      <span class="meta-item">
+        <span class="post-meta-divider pc-show">|</span>
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
+        
+          
+            <a href="https://sata-moto.github.io/tag/p5X0YCiSJ">
+              <span>知识点</span>
+            </a>、
+          
+        
+          
+            <a href="https://sata-moto.github.io/tag/MA7E1UQmV">
+              <span>数据结构</span>
+            </a>
+          
+        
+      </span>
+      <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>11分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>2330<span class="pc-show">字数</span></span>
+    </span>
+  </div>
+</header>
+</div>
+              <div class="post-body next-md-body" id="post_body">
+                <h3 id="这篇文章的封面图果然应该放珂朵莉吧">这篇文章的封面图...果然应该放珂朵莉吧？</h3>
+<!-- more -->
+<h3 id="前言">前言：</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 最近被各种奇葩数据结构给虐得惨无人形...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 然后意外地看到了这道题：<a href="https://www.luogu.com.cn/problem/CF896C">CF896C Willem, Chtholly and Seniorious</a></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> Get到了一种神（kai）奇（che）的数据结构...ODT(old driver tree)</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 写一篇学习笔记加以纪念...</p>
+<hr>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<h3 id="正文">正文：</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> ODT:老司机树（Old Driver Tree），又称珂朵莉树（Chtholly Tree），起源于某位巨佬的<a href="https://www.luogu.com.cn/problem/CF896C">CF896C</a>的题解...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 这位巨佬在用线段树爆切了上面那题后，又提出了一种神奇的暴力骗分数据结构：ODT...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> ODT适用于解决带有区间染色，区间赋值（也可看做区间染色）类型的问题，要求数据随机...（数据不随机时，它的复杂度是假的，所以只能作为暴力骗分算法看待，不能作为正解）</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 我们首先拉出一个问题：在一条长为L的线段上任给两个点，问这两个点之间的距离的期望值...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 很容易算出来期望值为L/3，证明如下:</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 分布函数为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mn>2</mn><mi>x</mi><mi mathvariant="normal">/</mi><mi>L</mi><mo>−</mo><mo>(</mo><mi>x</mi><mi mathvariant="normal">/</mi><mi>L</mi><msup><mo>)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">F(x)=2x/L-(x/L)^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mord mathdefault">x</span><span class="mord">/</span><span class="mord mathdefault">L</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mord">/</span><span class="mord mathdefault">L</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 分布密度函数为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mn>2</mn><mi mathvariant="normal">/</mi><mi>L</mi><mo>−</mo><mn>2</mn><mi>x</mi><mi mathvariant="normal">/</mi><msup><mi>L</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f(x)=2/L-2x/L^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mord">/</span><span class="mord mathdefault">L</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mord mathdefault">x</span><span class="mord">/</span><span class="mord"><span class="mord mathdefault">L</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 故期望为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>∫</mo><mi>x</mi><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>d</mi><mi>x</mi><mo>=</mo><mi>L</mi><mi mathvariant="normal">/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">E(x)=∫xf(x)dx=L/3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.11112em;vertical-align:-0.30612em;"></span><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">x</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mord mathdefault">d</span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mord">/</span><span class="mord">3</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 也就是说，每次染色可以把1/3的区间上的颜色变为同一种...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 由此看来，在进行若干次随机的区间染色操作后，区间中的线段数目会比较少...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 基于 <strong>区间中的颜色种数会比较少</strong> 这一性质，我们可以直接把同颜色的块缩成一个点，然后对于这不多的点暴力处理问题...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 如何维护这些不多的点？我们一般使用平衡树...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 当然，使用数组或者链表也可以，但是数组难以高效地插入删除，链表难以高效地查询...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 使用哪种平衡树呢？秉承着能偷懒就偷懒的骗分原则，我们选择set...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 以下给出本题中ODT的几大操作（网上关于ODT的写法大体都差不多，所以以下代码与其它人代码相似，绝非巧合）</p>
+<hr>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<h3 id="init-定义和初始化"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>I</mi><mi>n</mi><mi>i</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Init</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault">n</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span></span></span></span> （定义和初始化）：</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 定义一个ODT很简单，我们只需要一个结构体和一个set就可以搞定，因为我们set维护的是某一颜色块缩成的点，所以我们结构体应存储当前颜色块的左右端点和颜色，然后直接放到set里就好了...</p>
+<pre><code class="language-cpp">#define int long long
+//不想考虑全文的int溢出的话，就偷个懒吧
+
+struct node
+{
+	int l, r;//左右端点
+	mutable int key;//颜色
+ 	//mutable可以解除const状态，set中元素如果不带mutable，是不能修改的...
+
+	node (int a, int b, int c)
+	{
+		l = a, r = b, key = c;
+	}
+	node () { }
+	//构造函数
+
+	bool operator &lt; (const node &amp; other) const
+	{
+		return l &lt; other.l;
+	}
+	//因为是set，所以要重载运算符    
+};
+set &lt;node &gt; s;
+</code></pre>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 初始化也很简单，最开始的时候，每个节点作为单独的颜色块插入就好了，不用提前缩点，毕竟长度为1/3L的区间染色后缩点优化的复杂度，初始时缩点所优化的复杂度可以忽略不计...</p>
+<pre><code class="language-cpp">for(register int k = 1; k &lt;= n; k++)
+	s.insert(node(k, k, rnd() % maxn + 1));
+//rnd() % maxn + 1是本题中的初始点权
+</code></pre>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<h3 id="split分裂"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>p</mi><mi>l</mi><mi>i</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Split</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span></span></span></span>（分裂）:</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 当我们把某个颜色块合并成某个点后，如果我们以后的某个操作并没有完全覆盖该颜色块，我们就需要把该颜色块从某个点处分成两半...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>p</mi><mi>l</mi><mi>i</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Split</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span></span></span></span>函数的作用，就是把某个颜色块节点分成两半，并返回后面一半的迭代器...</p>
+<pre><code class="language-cpp">//把某个颜色块[l,r]分成[l,wz-1]和[wz,r]
+IT split(int wz)
+{
+	IT it = s.lower_bound(node(wz, 0, 0));
+	//二分查找第一个大于等于该点的颜色段左端点
+
+	if(it != s.end() &amp;&amp; it-&gt;l == wz) return it;
+	//如果这个点本来就是某个颜色块的左端点
+	//那么我们就不需要分裂这个点了
+
+	--it;
+	//否则，需要分裂的颜色段一定是--it
+
+	int L = it-&gt;l, R = it-&gt;r, key = it-&gt;key;
+	//提取需要分裂的颜色端的信息 
+
+	s.erase(it);
+	//删掉这个颜色端 
+	
+	s.insert(node(L, wz - 1, key));
+	return s.insert(node(wz, R, key)).first;
+	//加入 [l,wz-1]和[wz,r]两个新的颜色端并且返回后面这个颜色端的迭代器 
+}
+</code></pre>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<h3 id="assign合并op2"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>s</mi><mi>s</mi><mi>i</mi><mi>g</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">Assign</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span></span></span></span>（合并）[<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>p</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">op=2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>]:</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 这就是ODT能够水题的基础操作...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 把一段区间里的所有玩意全部染上某种颜色...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 这里介绍set内置的一个函数：</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> void erase (iterator first, iterator last)，可以删除[first,last)区间的所有玩意...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 代码很简单：</p>
+<pre><code class="language-cpp">void assign(int l, int r, int key)
+{
+	IT R = split(r + 1), L = split(l);
+	//先把左右端点从它们在的颜色段里割出来...
+	//注意，此处要先割R,再割L,因为割R的时候有可能干扰先割出来的L 
+	
+	s.erase(L, R);
+	//删掉区间内的所有东西（左闭右开） 
+	
+	s.insert(node(l, r, key));
+	//加入一个新的颜色段 
+}
+</code></pre>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<h3 id="add区间加op1"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>d</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Add</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault">d</span><span class="mord mathdefault">d</span></span></span></span>（区间加）[<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>p</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">op=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>]:</h3>
+<pre><code class="language-cpp">//没啥好说的，反正点很少，割出来暴力即可 
+void Add(int l, int r, int x)
+{
+	IT R = split(r + 1), L = split(l);
+	for(; L != R; ++L) L-&gt;key += x;
+}
+</code></pre>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<h3 id="kth区间第k小op3"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi><mi>t</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">Kth</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span></span></span></span>（区间第k小）[<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>p</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">op=3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span>]:</h3>
+<pre><code class="language-cpp">
+//没啥好说的，反正点很少，割出来暴力排序即可 
+int Kth(int l, int r, int x)
+{
+	IT R = split(r + 1), L = split(l);
+	vector &lt;pair &lt;int , int &gt; &gt; v;
+
+	for(; L != R; ++L) v.push_back(mp(L-&gt;key, L-&gt;r - L-&gt;l + 1));
+	sort(v.begin(), v.end());
+
+	for(int k = 0; k &lt; (int )v.size(); k++)
+	{
+		x -= v[k].second;
+		if(x &lt;= 0) return v[k].first;
+	}
+	return -1ll;
+}
+</code></pre>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<h3 id="sum区间x次方和op4"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>u</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">Sum</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span></span></span></span>（区间x次方和）[<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>p</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">op=4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span>]:</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 引用某数据结构毒瘤在网课上的发言：数据结构就不是能维护这样的东西的东西...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 所以暴力吧...</p>
+<pre><code class="language-cpp">//暴力即可，x次方要写个快速幂 
+int Sum(int l, int r, int x, int y)
+{
+	IT R = split(r + 1), L = split(l);
+	int ret = 0;
+
+	for(; L != R; ++L)
+		ret = (ret + (L-&gt;r - L-&gt;l + 1) * quick_pow(L-&gt;key, x, y) ) % y;
+	return ret;
+}
+</code></pre>
+<hr>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 综上，可以看出：ODT的精髓就在于合并，合并完了之后随意暴力乱搞，什么<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>（扫一遍）,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(nlogn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>（排个序）,乃至<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>（乱搞），的单次复杂度都是可以接受的了...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 据说数据全随机的情况下，复杂度可以证明是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>m</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(mlogn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">m</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 实际跑起来的速度，在不卡ODT的题目里，是相当优秀的...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 下面附例题完整代码：</p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+#define mp make_pair
+#define int long long
+#define IT set &lt;node &gt; :: iterator
+
+using namespace std;
+
+const int N = 1e5 + 10;
+const int MOD = 1e9 + 7;
+
+int quick_pow(int x, int y, int P)
+{
+	x %= P;
+	int mult = x, ans = 1;
+
+	while(y)
+	{
+		if(y &amp; 1)
+			ans *= mult, ans %= P;
+
+		mult *= mult, mult %= P, y &gt;&gt;= 1;
+	}
+
+	return ans % P;
+}
+
+struct node
+{
+	int l, r;
+	mutable int key;
+
+	node (int a, int b, int c)
+	{
+		l = a, r = b, key = c;
+	}
+	node () { }
+
+	bool operator &lt; (const node &amp; other) const
+	{
+		return l &lt; other.l;
+	}
+};
+set &lt;node &gt; s;
+
+int n, m, maxn;
+int seed;
+
+int rnd()
+{
+	int ret = seed;
+	seed = (seed * 7 + 13) % MOD;
+	return ret;
+}
+
+IT split(int wz)
+{
+	IT it = s.lower_bound(node(wz, 0, 0));
+	if(it != s.end() &amp;&amp; it-&gt;l == wz) return it;
+
+	--it;
+	int L = it-&gt;l, R = it-&gt;r, key = it-&gt;key;
+	s.erase(it),s.insert(node(L, wz - 1, key));
+	return s.insert(node(wz, R, key)).first;
+}
+void assign(int l, int r, int key)
+{
+	IT R = split(r + 1), L = split(l);
+	s.erase(L, R),s.insert(node(l, r, key));
+}
+
+void Add(int l, int r, int x)
+{
+	IT R = split(r + 1), L = split(l);
+	for(; L != R; ++L) L-&gt;key += x;
+}
+
+int Kth(int l, int r, int x)
+{
+	IT R = split(r + 1), L = split(l);
+	vector &lt;pair &lt;int , int &gt; &gt; v;
+
+	for(; L != R; ++L) v.push_back(mp(L-&gt;key, L-&gt;r - L-&gt;l + 1));
+	sort(v.begin(), v.end());
+
+	for(int k = 0; k &lt; (int )v.size(); k++)
+	{
+		x -= v[k].second;
+		if(x &lt;= 0) return v[k].first;
+	}
+	return -1ll;
+}
+
+int Sum(int l, int r, int x, int y)
+{
+	IT R = split(r + 1), L = split(l);
+	int ret = 0;
+
+	for(; L != R; ++L)
+		ret = (ret + (L-&gt;r - L-&gt;l + 1) * quick_pow(L-&gt;key, x, y) ) % y;
+	return ret;
+}
+
+signed main()
+{
+	scanf(&quot;%lld %lld %lld %lld&quot;, &amp;n, &amp;m, &amp;seed, &amp;maxn);
+	for(register int k = 1; k &lt;= n; k++)
+		s.insert(node(k, k, rnd() % maxn + 1));
+	for(register int k = 1; k &lt;= m; k++)
+	{
+		int op = (rnd() % 4) + 1, l = (rnd() % n) + 1, r = (rnd() % n) + 1, x;
+		if(l &gt; r) swap(l, r);
+
+		if(op == 3)
+			x = (rnd() % (r - l + 1)) + 1;
+		else
+			x = (rnd() % maxn) + 1;
+
+		if(op == 1)
+			Add(l, r, x);
+		if(op == 2)
+			assign(l, r, x);
+		if(op == 3)
+			printf(&quot;%lld\n&quot;, Kth(l, r, x));
+		if(op == 4)
+		{
+			int y = (rnd() % maxn) + 1;
+			printf(&quot;%lld\n&quot;, Sum(l, r, x, y));
+		}
+	}
+
+	return 0;
+}
+</code></pre>
+<hr>
+<h3 id="结语">结语：</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 本来想上几道练习的，不过现在那几道经典练习都被打上了[卡odt],[准备卡odt]的标签，所以不放了...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> Orz...就像某Shortest Path Fake Algorithm算法一样，自从某一个题目卡了ODT开始，总有题目想卡ODT...</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="1em"/><mspace width="1em"/></mrow><annotation encoding="application/x-tex">\quad\quad</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:1em;"></span></span></span></span> 希望CCF不会做这种Orz的事吧0.0</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+
+              </div>
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Sata_moto&#39;s Blog
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://sata-moto.github.io/post/jaacjYZwO" title="ODT 学习笔记">ODT 学习笔记</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://sata-moto.github.io/tag/p5X0YCiSJ"># 知识点</a>
+    
+      <a href="https://sata-moto.github.io/tag/MA7E1UQmV"># 数据结构</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="树套树之树状数组套动态开点线段树（带修主席树）学习笔记" href="https://sata-moto.github.io/post/X4OP3mcMs">树套树之树状数组套动态开点线段树（带修主席树）学习笔记</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="树套树之树状数组套动态开点线段树（带修主席树）学习笔记" href="https://sata-moto.github.io/post/X4OP3mcMs">上一篇</a>
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="Lucas定理学习笔记" href="https://sata-moto.github.io/post/QDResjPWl">Lucas定理学习笔记</a>
+        <a class="nav-mobile-next" title="Lucas定理学习笔记" href="https://sata-moto.github.io/post/QDResjPWl">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+              
+                
+                  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+                
+                
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      © 2019-2020 <i class="fa fa-heart"></i> HsxyHao
+    </div>
+    <div class="poweredby">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+  </footer>
+  
+  
+  <div class="gemini back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+    <div class="bg-img">
+      <img src="\media\images\custom-bgImg.png" />
+    </div>
+  
+  
+    <link rel="stylesheet" href="/media/live2d/histoire/css/live2d.css" />
+<div class="box-scale">
+  <div id="landlord" style="left:5px;bottom:0px;" data-key="7d1c3efb8dcc47f88e80c15b48de8ed1">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    <div class="live_talk_input_body">
+      <div class="live_talk_input_name_body">
+        <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字" />
+      </div>
+      <div class="live_talk_input_text_body">
+        <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？"/>
+        <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+      </div>
+    </div>
+    <input name="live_talk" id="live_talk" value="1" type="hidden" />
+    <div class="live_ico_box">
+      <div class="live_ico_item type_info" id="showInfoBtn"></div>
+      <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+      
+      <div class="live_ico_item type_music" id="musicButton"></div>
+      
+      <div class="live_ico_item type_youdu" id="youduButton"></div>
+      <div class="live_ico_item type_quit" id="hideButton"></div>
+      <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+      <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+      <input id="duType" value="douqilai" type="hidden">
+      
+        <input name="live2dBGM" value="http://p.ik123.net/2020-02/ik123_28_0855_%BD%E7%C3%E6bgm1.mp3" type="hidden">
+      
+    </div>
+  </div>
+</div>
+<div id="open_live2d">召唤伊斯特瓦尔</div>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+var message_Path = '/media/live2d/histoire/';
+let landlord = document.querySelector('#landlord');
+var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="/media/live2d/histoire/js/live2d.js"></script>
+<script type="text/javascript" src="/media/live2d/histoire/js/message.js"></script>
+  
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text'),
+  drawerBox = document.querySelector('#drawer_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  
+  let hasCacu = false;
+  window.onresize = function() {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+  
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function() {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, transitionDir,{ });
+          }
+        })
+        window.Velocity(viewport, openProp,{
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp ,{
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+</script>
+    </div>
+  </body>
+  <script src="/media/js/motion.js"></script>
+</html>

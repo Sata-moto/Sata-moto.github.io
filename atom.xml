@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sata-moto.github.io</id>
     <title>Sata_moto&apos;s Blog</title>
-    <updated>2020-02-28T01:55:35.852Z</updated>
+    <updated>2020-02-28T02:08:05.830Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sata-moto.github.io"/>
     <link rel="self" href="https://sata-moto.github.io/atom.xml"/>
@@ -11,6 +11,61 @@
     <logo>https://sata-moto.github.io/images/avatar.png</logo>
     <icon>https://sata-moto.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Sata_moto&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[线性基学习笔记]]></title>
+        <id>https://sata-moto.github.io/post/bhh9cpUdK</id>
+        <link href="https://sata-moto.github.io/post/bhh9cpUdK">
+        </link>
+        <updated>2020-02-28T02:04:41.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="这篇文章差点半途咕掉了呢">这篇文章差点半途咕掉了呢...</h3>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="这篇文章差点半途咕掉了呢">这篇文章差点半途咕掉了呢...</h3>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[树套树之树状数组套动态开点线段树（带修主席树）学习笔记]]></title>
+        <id>https://sata-moto.github.io/post/X4OP3mcMs</id>
+        <link href="https://sata-moto.github.io/post/X4OP3mcMs">
+        </link>
+        <updated>2020-02-28T02:03:58.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目好长">！！！题目好长</h3>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目好长">！！！题目好长</h3>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ODT 学习笔记]]></title>
+        <id>https://sata-moto.github.io/post/jaacjYZwO</id>
+        <link href="https://sata-moto.github.io/post/jaacjYZwO">
+        </link>
+        <updated>2020-02-28T02:02:10.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="这篇文章的封面图果然应该放珂朵莉吧">这篇文章的封面图...果然应该放珂朵莉吧？</h3>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="这篇文章的封面图果然应该放珂朵莉吧">这篇文章的封面图...果然应该放珂朵莉吧？</h3>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lucas定理学习笔记]]></title>
+        <id>https://sata-moto.github.io/post/QDResjPWl</id>
+        <link href="https://sata-moto.github.io/post/QDResjPWl">
+        </link>
+        <updated>2020-02-28T01:59:41.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="lucas这个名字貌似挺常见的来着">Lucas这个名字貌似挺常见的来着？</h3>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="lucas这个名字貌似挺常见的来着">Lucas这个名字貌似挺常见的来着？</h3>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[三分法学习笔记]]></title>
+        <id>https://sata-moto.github.io/post/UIPj8zWnX</id>
+        <link href="https://sata-moto.github.io/post/UIPj8zWnX">
+        </link>
+        <updated>2020-02-28T01:56:55.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="既然有二分法那为什么不能三分呢">既然有二分法，那为什么不能三分呢？</h3>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="既然有二分法那为什么不能三分呢">既然有二分法，那为什么不能三分呢？</h3>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[配对堆学习笔记]]></title>
         <id>https://sata-moto.github.io/post/u3KjOvd_5</id>
@@ -70,75 +125,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<h3 id="这里是博主无聊时整理的模板库啦ovo">这里是博主无聊时整理的模板库啦OvO...</h3>
 <h3 id="要看看吗">要看看吗？</h3>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[单调栈与单调队列略讲]]></title>
-        <id>https://sata-moto.github.io/post/dan-diao-zhan-yu-dan-diao-dui-lie-lue-jiang</id>
-        <link href="https://sata-moto.github.io/post/dan-diao-zhan-yu-dan-diao-dui-lie-lue-jiang">
-        </link>
-        <updated>2020-02-04T08:30:09.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="嘛本来是想写单调栈单调队列的">嘛...本来是想写单调栈单调队列的...</h3>
-<h3 id="结果最后栈和队列的内容反而多一些00">结果最后栈和队列的内容反而多一些0.0...</h3>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="嘛本来是想写单调栈单调队列的">嘛...本来是想写单调栈单调队列的...</h3>
-<h3 id="结果最后栈和队列的内容反而多一些00">结果最后栈和队列的内容反而多一些0.0...</h3>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[manacher算法学习笔记]]></title>
-        <id>https://sata-moto.github.io/post/manacher-suan-fa-xue-xi-bi-ji</id>
-        <link href="https://sata-moto.github.io/post/manacher-suan-fa-xue-xi-bi-ji">
-        </link>
-        <updated>2020-02-04T08:28:30.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="manacher算法是一个歪果仁坐在马拉的车上想出来的字符串算法">manacher算法是一个歪果仁坐在马拉的车上想出来的字符串算法！</h3>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="manacher算法是一个歪果仁坐在马拉的车上想出来的字符串算法">manacher算法是一个歪果仁坐在马拉的车上想出来的字符串算法！</h3>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[基础图论知识拓展]]></title>
-        <id>https://sata-moto.github.io/post/ji-chu-tu-lun-zhi-shi-tuo-zhan</id>
-        <link href="https://sata-moto.github.io/post/ji-chu-tu-lun-zhi-shi-tuo-zhan">
-        </link>
-        <updated>2020-02-04T08:28:08.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="举头望明月低头思故乡">举头望明月，低头思故乡...</h3>
-<h3 id="求明月与故乡的最短路00">求明月与故乡的最短路0.0</h3>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="举头望明月低头思故乡">举头望明月，低头思故乡...</h3>
-<h3 id="求明月与故乡的最短路00">求明月与故乡的最短路0.0</h3>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【置顶】 博客索引]]></title>
-        <id>https://sata-moto.github.io/post/zhi-ding-bo-ke-suo-yin</id>
-        <link href="https://sata-moto.github.io/post/zhi-ding-bo-ke-suo-yin">
-        </link>
-        <updated>2020-02-04T08:23:05.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="color-000080-mathcalwelcome-to-myblog"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="#000080"><mrow><mi mathvariant="script">W</mi><mi>e</mi><mi>l</mi><mi>c</mi><mi>o</mi><mi>m</mi><mi>e</mi><mtext> </mtext><mi mathvariant="script">T</mi><mi>o</mi><mtext> </mtext><mi mathvariant="script">M</mi><mi>y</mi><mi mathvariant="script">B</mi><mi>l</mi><mi>o</mi><mi>g</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color {#000080} \mathcal{Welcome\ To \ MyBlog}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord" style="color:#000080;"><span class="mord mathcal" style="margin-right:0.08222em;color:#000080;">W</span><span class="mord mathdefault" style="color:#000080;">e</span><span class="mord mathdefault" style="margin-right:0.01968em;color:#000080;">l</span><span class="mord mathdefault" style="color:#000080;">c</span><span class="mord mathdefault" style="color:#000080;">o</span><span class="mord mathdefault" style="color:#000080;">m</span><span class="mord mathdefault" style="color:#000080;">e</span><span class="mspace" style="color:#000080;"><span style="color:#000080;"> </span></span><span class="mord mathcal" style="margin-right:0.25417em;color:#000080;">T</span><span class="mord mathdefault" style="color:#000080;">o</span><span class="mspace" style="color:#000080;"><span style="color:#000080;"> </span></span><span class="mord mathcal" style="color:#000080;">M</span><span class="mord mathdefault" style="margin-right:0.03588em;color:#000080;">y</span><span class="mord mathcal" style="margin-right:0.03041em;color:#000080;">B</span><span class="mord mathdefault" style="margin-right:0.01968em;color:#000080;">l</span><span class="mord mathdefault" style="color:#000080;">o</span><span class="mord mathdefault" style="margin-right:0.03588em;color:#000080;">g</span></span></span></span></span></h3>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
-<h3 id="博客文章建议开启缩放食用">博客文章建议开启缩放食用</h3>
-<h3 id="本博客所有内容同步更新于洛谷博客-httpswwwluogucomcnblogsata-mato">本博客所有内容同步更新于洛谷博客 : <a href="https://www.luogu.com.cn/blog/Sata-mato/">https://www.luogu.com.cn/blog/Sata-mato/</a></h3>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="color-000080-mathcalwelcome-to-myblog"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="#000080"><mrow><mi mathvariant="script">W</mi><mi>e</mi><mi>l</mi><mi>c</mi><mi>o</mi><mi>m</mi><mi>e</mi><mtext> </mtext><mi mathvariant="script">T</mi><mi>o</mi><mtext> </mtext><mi mathvariant="script">M</mi><mi>y</mi><mi mathvariant="script">B</mi><mi>l</mi><mi>o</mi><mi>g</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color {#000080} \mathcal{Welcome\ To \ MyBlog}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord" style="color:#000080;"><span class="mord mathcal" style="margin-right:0.08222em;color:#000080;">W</span><span class="mord mathdefault" style="color:#000080;">e</span><span class="mord mathdefault" style="margin-right:0.01968em;color:#000080;">l</span><span class="mord mathdefault" style="color:#000080;">c</span><span class="mord mathdefault" style="color:#000080;">o</span><span class="mord mathdefault" style="color:#000080;">m</span><span class="mord mathdefault" style="color:#000080;">e</span><span class="mspace" style="color:#000080;"><span style="color:#000080;"> </span></span><span class="mord mathcal" style="margin-right:0.25417em;color:#000080;">T</span><span class="mord mathdefault" style="color:#000080;">o</span><span class="mspace" style="color:#000080;"><span style="color:#000080;"> </span></span><span class="mord mathcal" style="color:#000080;">M</span><span class="mord mathdefault" style="margin-right:0.03588em;color:#000080;">y</span><span class="mord mathcal" style="margin-right:0.03041em;color:#000080;">B</span><span class="mord mathdefault" style="margin-right:0.01968em;color:#000080;">l</span><span class="mord mathdefault" style="color:#000080;">o</span><span class="mord mathdefault" style="margin-right:0.03588em;color:#000080;">g</span></span></span></span></span></h3>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow></mrow><annotation encoding="application/x-tex">
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
-<h3 id="博客文章建议开启缩放食用">博客文章建议开启缩放食用</h3>
-<h3 id="本博客所有内容同步更新于洛谷博客-httpswwwluogucomcnblogsata-mato">本博客所有内容同步更新于洛谷博客 : <a href="https://www.luogu.com.cn/blog/Sata-mato/">https://www.luogu.com.cn/blog/Sata-mato/</a></h3>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://sata-moto.github.io/post/hello-gridea</id>
-        <link href="https://sata-moto.github.io/post/hello-gridea">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 ]]></content>
     </entry>
 </feed>
