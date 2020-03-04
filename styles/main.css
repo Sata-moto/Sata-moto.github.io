@@ -1884,7 +1884,7 @@ blockquote:before {
   font-weight: bold;
 }
 body {
-      background-color: #f8f9fa;
+      background-color: #FFF;
     }.header {
         width: 960px;
         margin: 0 auto;
@@ -1926,7 +1926,7 @@ body {
     .node-title::before {
       background-color: #212529;
     }.bg-color {
-      background-color: #f1f3f5;
+      background-color: #f8f9fa;
     }a {
       color: #1864ab;
     }
