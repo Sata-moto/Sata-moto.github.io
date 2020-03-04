@@ -1895,11 +1895,11 @@ body {
         margin: 0 auto;
       }
     @font-face {
-      font-family: 'fzzt2';
-      src: url('/media/fonts/fzzt2.ttf');
+      font-family: 'fzbwksjw';
+      src: url('/media/fonts/fzbwksjw.ttf');
     }
     * {
-        font-family: 'fzzt2';
+        font-family: 'fzbwksjw';
     }body {
       color: #495057;
     }
