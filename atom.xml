@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://sata-moto.github.io</id>
     <title>Sata_moto&apos;s Blog</title>
-    <updated>2020-03-05T00:48:54.072Z</updated>
+    <updated>2020-03-05T00:49:16.384Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://sata-moto.github.io"/>
+    <link rel="self" href="https://sata-moto.github.io/atom.xml"/>
     <subtitle>从远方而来，归往远方
 </subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://sata-moto.github.io/images/avatar.png</logo>
+    <icon>https://sata-moto.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Sata_moto&apos;s Blog</rights>
     <entry>
         <title type="html"><![CDATA[线性基学习笔记]]></title>
-        <id>http://localhost:4000/post/bhh9cpUdK</id>
-        <link href="http://localhost:4000/post/bhh9cpUdK">
+        <id>https://sata-moto.github.io/post/bhh9cpUdK</id>
+        <link href="https://sata-moto.github.io/post/bhh9cpUdK">
         </link>
         <updated>2020-02-28T02:04:41.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="这篇文章差点半途咕掉了呢">这篇文章差点半途咕掉了呢...</h3>
@@ -24,8 +24,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[树套树之树状数组套动态开点线段树（带修主席树）学习笔记]]></title>
-        <id>http://localhost:4000/post/X4OP3mcMs</id>
-        <link href="http://localhost:4000/post/X4OP3mcMs">
+        <id>https://sata-moto.github.io/post/X4OP3mcMs</id>
+        <link href="https://sata-moto.github.io/post/X4OP3mcMs">
         </link>
         <updated>2020-02-28T02:03:58.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="题目好长">！！！题目好长</h3>
@@ -35,8 +35,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[ODT 学习笔记]]></title>
-        <id>http://localhost:4000/post/jaacjYZwO</id>
-        <link href="http://localhost:4000/post/jaacjYZwO">
+        <id>https://sata-moto.github.io/post/jaacjYZwO</id>
+        <link href="https://sata-moto.github.io/post/jaacjYZwO">
         </link>
         <updated>2020-02-28T02:02:10.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="这篇文章的封面图果然应该放珂朵莉吧">这篇文章的封面图...果然应该放珂朵莉吧？</h3>
@@ -46,8 +46,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Lucas定理学习笔记]]></title>
-        <id>http://localhost:4000/post/QDResjPWl</id>
-        <link href="http://localhost:4000/post/QDResjPWl">
+        <id>https://sata-moto.github.io/post/QDResjPWl</id>
+        <link href="https://sata-moto.github.io/post/QDResjPWl">
         </link>
         <updated>2020-02-28T01:59:41.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="lucas这个名字貌似挺常见的来着">Lucas这个名字貌似挺常见的来着？</h3>
@@ -57,8 +57,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[三分法学习笔记]]></title>
-        <id>http://localhost:4000/post/UIPj8zWnX</id>
-        <link href="http://localhost:4000/post/UIPj8zWnX">
+        <id>https://sata-moto.github.io/post/UIPj8zWnX</id>
+        <link href="https://sata-moto.github.io/post/UIPj8zWnX">
         </link>
         <updated>2020-02-28T01:56:55.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="既然有二分法那为什么不能三分呢">既然有二分法，那为什么不能三分呢？</h3>
@@ -68,8 +68,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[配对堆学习笔记]]></title>
-        <id>http://localhost:4000/post/u3KjOvd_5</id>
-        <link href="http://localhost:4000/post/u3KjOvd_5">
+        <id>https://sata-moto.github.io/post/u3KjOvd_5</id>
+        <link href="https://sata-moto.github.io/post/u3KjOvd_5">
         </link>
         <updated>2020-02-28T01:53:36.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="应该不会有人跑去写斐波那契堆的吧">应该不会有人跑去写斐波那契堆的吧？</h3>
@@ -79,8 +79,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[最小割树（Gomory-Hu Tree）学习笔记]]></title>
-        <id>http://localhost:4000/post/z50kIbs0G</id>
-        <link href="http://localhost:4000/post/z50kIbs0G">
+        <id>https://sata-moto.github.io/post/z50kIbs0G</id>
+        <link href="https://sata-moto.github.io/post/z50kIbs0G">
         </link>
         <updated>2020-02-28T01:50:52.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="不得不说树真是一种神奇的数据结构呢">不得不说，树真是一种神奇的数据结构呢。</h3>
@@ -90,8 +90,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Splay 学习笔记]]></title>
-        <id>http://localhost:4000/post/splay-xue-xi-bi-ji</id>
-        <link href="http://localhost:4000/post/splay-xue-xi-bi-ji">
+        <id>https://sata-moto.github.io/post/splay-xue-xi-bi-ji</id>
+        <link href="https://sata-moto.github.io/post/splay-xue-xi-bi-ji">
         </link>
         <updated>2020-02-04T08:45:01.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="总有人喜欢treap什么的">总有人喜欢<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">Treap</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">a</span><span class="mord mathdefault">p</span></span></span></span>什么的...</h3>
@@ -103,8 +103,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[斜率优化学习笔记]]></title>
-        <id>http://localhost:4000/post/xie-lu-you-hua-xue-xi-bi-ji</id>
-        <link href="http://localhost:4000/post/xie-lu-you-hua-xue-xi-bi-ji">
+        <id>https://sata-moto.github.io/post/xie-lu-you-hua-xue-xi-bi-ji</id>
+        <link href="https://sata-moto.github.io/post/xie-lu-you-hua-xue-xi-bi-ji">
         </link>
         <updated>2020-02-04T08:31:32.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="n方-d-p-要a掉">N方 D P 要A掉</h3>
@@ -116,8 +116,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[CSP 模板]]></title>
-        <id>http://localhost:4000/post/csp-mo-ban</id>
-        <link href="http://localhost:4000/post/csp-mo-ban">
+        <id>https://sata-moto.github.io/post/csp-mo-ban</id>
+        <link href="https://sata-moto.github.io/post/csp-mo-ban">
         </link>
         <updated>2020-02-04T08:30:33.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="这里是博主无聊时整理的模板库啦ovo">这里是博主无聊时整理的模板库啦OvO...</h3>
