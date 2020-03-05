@@ -1894,13 +1894,7 @@ body {
         width: 960px;
         margin: 0 auto;
       }
-    @font-face {
-      font-family: 'fzbwksjw';
-      src: url('/media/fonts/fzbwksjw.ttf');
-    }
-    * {
-        font-family: 'fzbwksjw';
-    }body {
+    body {
       color: #495057;
     }
     .next-md-body {
