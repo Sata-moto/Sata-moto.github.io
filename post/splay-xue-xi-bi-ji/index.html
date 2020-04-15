@@ -7,7 +7,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="从远方而来，归往远方
 ">
-<link rel="shortcut icon" href="https://sata-moto.github.io/favicon.ico?v=1583369594399">
+<link rel="shortcut icon" href="https://sata-moto.github.io/favicon.ico?v=1586953827232">
 <link rel="stylesheet" href="https://sata-moto.github.io/styles/main.css">
 
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -131,9 +131,17 @@
 <div class="sidebar">
     <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
       
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
       <div class="sidebar-body gemini" id="sidebar_body">
         
-          
+          <div class="post-side-meta" id="post_side_meta">
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://sata-moto.github.io/images/avatar.png"/>
@@ -188,6 +196,197 @@
 
 
 </div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E6%80%BB%E6%9C%89%E4%BA%BA%E5%96%9C%E6%AC%A2treap%E4%BB%80%E4%B9%88%E7%9A%84">总有人喜欢<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">Treap</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">a</span><span class="mord mathdefault">p</span></span></span></span>什么的...</a></li>
+<li><a href="#%E6%98%8E%E6%98%8Esplay%E8%BF%99%E4%B9%88%E5%8F%AF%E7%88%B1">明明<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>p</mi><mi>l</mi><mi>a</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">Splay</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>这么可爱！</a></li>
+<li><a href="#%E5%89%8D%E8%A8%80">前言：</a></li>
+<li><a href="#%E6%AD%A3%E6%96%87">正文：</a></li>
+<li><a href="#rotate%E6%97%8B%E8%BD%AC"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>t</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">rotate</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span></span></span></span>（旋转）:</a></li>
+<li><a href="#splay%E4%BC%B8%E5%B1%95"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>p</mi><mi>l</mi><mi>a</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">Splay</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>（伸展）:</a></li>
+<li><a href="#find%E5%BE%97%E5%88%B0%E6%9F%90%E4%B8%AA%E7%82%B9%E7%9A%84%E6%8E%92%E5%90%8D%E5%B9%B6%E5%B0%86%E5%85%B6splay%E4%B8%8A%E6%9D%A5"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mi>i</mi><mi>n</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Find</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span></span></span></span>（得到某个点的排名，并将其Splay上来）:</a></li>
+<li><a href="#rank%E5%BE%97%E5%88%B0%E6%8E%92%E8%A1%8C%E4%B8%BAx%E7%9A%84%E8%8A%82%E7%82%B9%E7%9A%84%E5%80%BC"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi><mi>a</mi><mi>n</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">Rank</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>（得到排行为x的节点的值）:</a></li>
+<li><a href="#insert%E6%8F%92%E5%85%A5"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>I</mi><mi>n</mi><mi>s</mi><mi>e</mi><mi>r</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Insert</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span></span></span></span>（插入）:</a></li>
+<li><a href="#delete%E5%88%A0%E9%99%A4"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi><mi>e</mi><mi>l</mi><mi>e</mi><mi>t</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">Delete</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span></span></span></span>（删除）:</a></li>
+<li><a href="#pre%E5%BE%97%E5%88%B0%E6%A0%B9%E7%9A%84%E5%89%8D%E9%A9%B1%E7%9A%84%E7%BC%96%E5%8F%B7"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">Pre</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span></span></span></span>（得到根的前驱的编号）:</a></li>
+<li><a href="#suc%E5%BE%97%E5%88%B0%E6%A0%B9%E7%9A%84%E5%90%8E%E7%BB%A7%E7%9A%84%E7%BC%96%E5%8F%B7"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>u</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">Suc</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">u</span><span class="mord mathdefault">c</span></span></span></span>（得到根的后继的编号）:</a></li>
+<li><a href="#%E7%BB%93%E8%AF%AD">结语：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
         
       </div>
     </div>
@@ -1132,7 +1331,7 @@ int main()
       <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
       <input id="duType" value="douqilai" type="hidden">
       
-        <input name="live2dBGM" value="http://p.ik123.net/2020-02/ik123_28_0855_%BD%E7%C3%E6bgm1.mp3" type="hidden">
+        <input name="live2dBGM" value="https://m7.music.126.net/20200415205040/2c26078eb3b304a1b379cbcc5df10b89/ymusic/573a/765f/809a/b95873e4eefca6965a4af1bb0a28a91f.mp3" type="hidden">
       
     </div>
   </div>
